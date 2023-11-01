@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour {
 		if(wavepointIndex >= Waypoints.points.Length - 1) {
 			Destroy(gameObject);
 			waveSpawnerScriptable.enemiesLeft--;
+			GetComponent<PlayerStats>().TakeDamage(20f);
 			return;
 		}
 
