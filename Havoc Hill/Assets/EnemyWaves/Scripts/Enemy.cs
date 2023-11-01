@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour {
 		Vector3 dir = target.position - transform.position;
 		transform.Translate(speed * Time.deltaTime * dir.normalized, Space.World);
 
-		if(Vector3.Distance(transform.position, target.position) <= 0.4f) {
+		if(Vector3.Distance(transform.position, target.position) <= 0.2f) {
 			GetNextWaypoint();
 		}
     }
@@ -44,6 +44,7 @@ public class Enemy : MonoBehaviour {
         if (health <= 0){
             Debug.Log("Enemy Dead");
             Destroy(gameObject);
+			waveSpawnerScriptable.enemiesLeft--;
         }
 	}
 }
