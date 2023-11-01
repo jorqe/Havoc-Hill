@@ -2598,6 +2598,7 @@ MonoBehaviour:
   horizontalInput: 0
   verticalInput: 0
   healthBar: {fileID: 1678424713}
+  playerStatsScriptable: {fileID: 11400000, guid: 21f263f98f36367428ee75e7287aa09a, type: 2}
 --- !u!4 &1610645578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7404159444173139269, guid: a848fb097b25fe741a77901c56606c65, type: 3}
@@ -2629,7 +2630,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678424711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10.16}
+  m_LocalPosition: {x: 0, y: 0, z: -1.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2639,7 +2640,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -620.71, y: -196.12}
+  m_AnchoredPosition: {x: -558.05023, y: -251.18}
   m_SizeDelta: {x: 10, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1678424713

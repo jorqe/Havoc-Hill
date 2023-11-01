@@ -8,8 +8,8 @@ public class PlayerStats : MonoBehaviour
     public float horizontalInput;
     public float verticalInput;
 
-
     public HealthBar healthBar;//reference it in the inspector > DONE
+    public PlayerStatsScriptableObject playerStatsScriptable;
 
     private void Start()
     {
@@ -22,7 +22,6 @@ public class PlayerStats : MonoBehaviour
     {
         currentHealth -= amount;
         healthBar.SetSlider(currentHealth);
-
     }
 
     public void heal(float amount)//method to heal 
@@ -33,6 +32,7 @@ public class PlayerStats : MonoBehaviour
 
     private void Update()//do something every tick
     {
+        healthBar.SetSlider(playerStatsScriptable.currentHealth);
         if (Input.GetKeyDown(KeyCode.K))//deal damage when K is pressed
         {
             TakeDamage(20f);

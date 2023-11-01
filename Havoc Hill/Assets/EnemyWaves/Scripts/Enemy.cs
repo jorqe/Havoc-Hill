@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour {
 	private WaveSpawner waveSpawner;
 	public WaveSpawnerScriptableObject waveSpawnerScriptable;
 	public BulletScriptableObject bullet;
+	public PlayerStatsScriptableObject playerStatsScriptable;
 
 	private void Start() {
 		target = Waypoints.points[0];
@@ -28,7 +29,7 @@ public class Enemy : MonoBehaviour {
 		if(wavepointIndex >= Waypoints.points.Length - 1) {
 			Destroy(gameObject);
 			waveSpawnerScriptable.enemiesLeft--;
-			GetComponent<PlayerStats>().TakeDamage(20f);
+			playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
 			return;
 		}
 
