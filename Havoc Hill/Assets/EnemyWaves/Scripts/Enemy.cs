@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour {
 	private int wavepointIndex = 0;
 	private WaveSpawner waveSpawner;
 	public WaveSpawnerScriptableObject waveSpawnerScriptable;
+	public BulletScriptableObject bullet;
+
 	private void Start() {
 		target = Waypoints.points[0];
 		waveSpawner = GetComponentInParent<WaveSpawner>();
@@ -31,5 +33,17 @@ public class Enemy : MonoBehaviour {
 
 		wavepointIndex++;
 		target = Waypoints.points[wavepointIndex];
+	}
+	
+	void OnTriggerEnter(Collider other){
+		if (other.CompareTag("Bullet")){
+            Debug.Log("Enemy health: " + health);
+            health -= bullet.bulletDamage;
+        }
+
+        if (health <= 0){
+            Debug.Log("Enemy Dead");
+            Destroy(gameObject);
+        }
 	}
 }

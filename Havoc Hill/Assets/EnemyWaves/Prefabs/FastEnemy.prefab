@@ -121,3 +121,4 @@ MonoBehaviour:
   speed: 7
   health: 50
   waveSpawnerScriptable: {fileID: 11400000, guid: 810622195c34cfc4caa9d1eb8c06cca4, type: 2}
+  bullet: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
