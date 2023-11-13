@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Wave Spawner Scriptable Object
   m_EditorClassIdentifier: 
   enemiesLeft: 0
-  damage: 5
+  damage: 12

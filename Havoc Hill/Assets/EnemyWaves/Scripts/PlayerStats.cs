@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerStats : MonoBehaviour
 {
@@ -7,6 +9,7 @@ public class PlayerStats : MonoBehaviour
     private float currentHealth;
     public float horizontalInput;
     public float verticalInput;
+
 
     public HealthBar healthBar;//reference it in the inspector > DONE
     public PlayerStatsScriptableObject playerStatsScriptable;
@@ -33,13 +36,11 @@ public class PlayerStats : MonoBehaviour
     private void Update()//do something every tick
     {
         healthBar.SetSlider(playerStatsScriptable.currentHealth);
-        if (Input.GetKeyDown(KeyCode.K))//deal damage when K is pressed
+
+        
+        if(playerStatsScriptable.currentHealth <= 0f)
         {
-            TakeDamage(20f);
-        }
-        if (Input.GetKeyDown(KeyCode.L))//heal when L is pressed
-        {
-            heal(20f);
+            SceneManager.LoadScene(0);
         }
 
         //Player Movement for testing collisions
