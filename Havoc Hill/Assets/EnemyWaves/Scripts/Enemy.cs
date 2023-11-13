@@ -4,6 +4,7 @@ public class Enemy : MonoBehaviour {
 
 	[SerializeField] private float speed;
 	[SerializeField] private float health;
+	[SerializeField] private int waypointsNum;
 	private Transform target;
 	private int wavepointIndex = 0;
 	private WaveSpawner waveSpawner;
@@ -12,7 +13,12 @@ public class Enemy : MonoBehaviour {
 	public PlayerStatsScriptableObject playerStatsScriptable;
 
 	private void Start() {
-		target = Waypoints.points[0];
+		if(waypointsNum == 1)
+			target = Waypoints.points[0];
+		else if(waypointsNum == 2)
+			target = Waypoints2.points[0];
+		else if(waypointsNum == 3)
+			target = Waypoints3.points[0];
 		waveSpawner = GetComponentInParent<WaveSpawner>();
 	}
 
@@ -26,15 +32,37 @@ public class Enemy : MonoBehaviour {
     }
 
 	void GetNextWaypoint() {
-		if(wavepointIndex >= Waypoints.points.Length - 1) {
-			Destroy(gameObject);
-			waveSpawnerScriptable.enemiesLeft--;
-			playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
-			return;
+		if(waypointsNum == 1) {
+			if(wavepointIndex >= Waypoints.points.Length) {
+				Destroy(gameObject);
+				waveSpawnerScriptable.enemiesLeft--;
+				playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
+				return;
+			}
+			target = Waypoints.points[wavepointIndex];
+		}
+
+		if(waypointsNum == 2) {
+			if(wavepointIndex >= Waypoints2.points.Length) {
+				Destroy(gameObject);
+				waveSpawnerScriptable.enemiesLeft--;
+				playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
+				return;
+			}
+			target = Waypoints2.points[wavepointIndex];
+		}
+
+		if(waypointsNum == 3) {
+			if(wavepointIndex >= Waypoints3.points.Length) {
+				Destroy(gameObject);
+				waveSpawnerScriptable.enemiesLeft--;
+				playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
+				return;
+			}
+			target = Waypoints3.points[wavepointIndex];
 		}
 
 		wavepointIndex++;
-		target = Waypoints.points[wavepointIndex];
 	}
 	
 	void OnTriggerEnter(Collider other){

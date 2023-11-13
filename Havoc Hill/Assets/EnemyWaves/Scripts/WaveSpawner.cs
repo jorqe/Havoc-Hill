@@ -7,10 +7,10 @@ public class WaveSpawner : MonoBehaviour {
 	public Transform enemyPrefab2;
 	public Transform enemyPrefab3;
 	public Transform spawnPoint;
-	[SerializeField] private int difficulty = 5;
-	[SerializeField] private int difficultyInc = 5;
-	[SerializeField] private float timeBetweenWaves = 5f;
-	[SerializeField] private float countdown = 2f;
+	[SerializeField] private int difficulty;
+	[SerializeField] private int difficultyInc;
+	[SerializeField] private float timeBetweenWaves;
+	[SerializeField] private float countdown;
 	[SerializeField] private List<int> wave = new();
 	private bool readyToCountDown = false;
 	public WaveSpawnerScriptableObject waveSpawnerScriptable;
@@ -37,7 +37,7 @@ public class WaveSpawner : MonoBehaviour {
 
 		CreateWave();
 
-		waveSpawnerScriptable.enemiesLeft = wave.Count;
+		waveSpawnerScriptable.enemiesLeft += wave.Count;
 
 		for(int i = 0; i < wave.Count; i++) {
 			if (wave[i] == 1)
