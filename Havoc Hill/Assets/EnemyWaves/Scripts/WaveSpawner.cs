@@ -22,7 +22,7 @@ public class WaveSpawner : MonoBehaviour {
 			countdown -= Time.deltaTime;
 		}
 
-		if (countdown <= 0f) {
+		if (countdown <= 0f && !button.activeSelf) {
 			//button.SetActive(false);
 			readyToCountDown = false;
 			countdown = timeBetweenWaves;
