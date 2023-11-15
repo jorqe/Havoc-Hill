@@ -9,11 +9,13 @@ public class Shoot : MonoBehaviour
     public Transform spawnPoint;
     public BulletScriptableObject bulletSO;
     public float fireSpeed;
+    public float rate = 1;
+    private Coroutine _current;
     // Start is called before the first frame update
     void Start()
     {
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
-        grabbable.activated.AddListener(shootBullet);
+        //grabbable.activated.AddListener(shootBullet);
     }
 
     // Update is called once per frame
@@ -22,11 +24,25 @@ public class Shoot : MonoBehaviour
         
     }
 
-    public void shootBullet(ActivateEventArgs arg){
-        fireSpeed = bulletSO.bulletSpeed;
-        GameObject spawnedBullet = Instantiate(bullet);
-        spawnedBullet.transform.position = spawnPoint.position;
-        spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
-        Destroy(spawnedBullet, 5);
+    public void BeginFire() {
+        if (_current != null) StopCoroutine(_current);
+
+        _current = StartCoroutine(shootBullet());
+    }
+
+    public void StopFire() {
+        if(_current != null) StopCoroutine(_current);
+    }
+
+    public IEnumerator shootBullet(){
+        while (true){
+            fireSpeed = bulletSO.bulletSpeed;
+            GameObject spawnedBullet = Instantiate(bullet);
+            spawnedBullet.transform.position = spawnPoint.position;
+            spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
+            Destroy(spawnedBullet, 5);
+
+            yield return new WaitForSeconds(1f / rate);
+        }
     }
 }
