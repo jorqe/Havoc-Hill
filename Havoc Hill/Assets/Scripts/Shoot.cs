@@ -45,4 +45,8 @@ public class Shoot : MonoBehaviour
             yield return new WaitForSeconds(1f / rate);
         }
     }
+
+    public void changeRate() {
+        rate += 1;
+    }
 }
