@@ -14,7 +14,9 @@ public class WaveSpawner : MonoBehaviour {
 	[SerializeField] private List<int> wave = new();
 	private bool readyToCountDown = false;
 	public WaveSpawnerScriptableObject waveSpawnerScriptable;
-	public GameObject button;
+	public GameObject button1;
+	public GameObject button2;
+	public GameObject button3;
 
 	void Update() {
 
@@ -22,7 +24,7 @@ public class WaveSpawner : MonoBehaviour {
 			countdown -= Time.deltaTime;
 		}
 
-		if (countdown <= 0f && !button.activeSelf) {
+		if (countdown <= 0f && (!button1.activeSelf || !button2.activeSelf || !button3.activeSelf)) {
 			readyToCountDown = false;
 			countdown = timeBetweenWaves;
 			StartCoroutine(SpawnWave());
@@ -66,7 +68,9 @@ public class WaveSpawner : MonoBehaviour {
 	}
 
 	IEnumerator chooseUpg() {
-		button.SetActive(true);
-		yield return new WaitUntil(() => !button.activeSelf);
+		button1.SetActive(true);
+		button2.SetActive(true);
+		button3.SetActive(true);
+		yield return new WaitUntil(() => (!button1.activeSelf || !button2.activeSelf || !button3.activeSelf));
 	}
 }
