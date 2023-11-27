@@ -20,7 +20,9 @@ public class WaveSpawner : MonoBehaviour {
 	public GameObject button2;
 	public GameObject button3;
 	public bool flag = false;
+	public bool answered = false;
 	public bool flag2 = true;
+	public bool flag3 = true;
 
 	void Update() {
 
@@ -33,18 +35,18 @@ public class WaveSpawner : MonoBehaviour {
 			countdown = timeBetweenWaves;
 			StartCoroutine(SpawnWave());
 			difficulty += difficultyInc;
+			flag = true;
 		}
 
 		if (waveSpawnerScriptable.enemiesLeft == 0) {
-			if (flag){
-				StartCoroutine(trivia());
-				flag = false;
+			//StartCoroutine(chooseUpg());
+			//StartCoroutine(trivia());
+			if(flag){
+				StartCoroutine(endOfWave());
 			}
-
-			if(flag2){
-				StartCoroutine(chooseUpg());
+			else{
+				readyToCountDown = true;
 			}
-			readyToCountDown = true;
 		}
 	}
 
@@ -83,14 +85,29 @@ public class WaveSpawner : MonoBehaviour {
 		button2.SetActive(true);
 		button3.SetActive(true);
 		yield return new WaitUntil(() => (!button1.activeSelf || !button2.activeSelf || !button3.activeSelf));
-		flag = true;
+		flag = false;
+		flag3 = true;
+
 	}
 
 	IEnumerator trivia() {
-		flag2 = false;
-		questionInterface.SetActive(true);
-		textBoxUpdate.DisplayRandomTrivia();
+		if(flag2){
+			questionInterface.SetActive(true);
+			textBoxUpdate.DisplayRandomTrivia();
+			flag2 = false;
+		}
 		yield return new WaitUntil(() => !questionInterface.activeSelf);
+		answered = true;
 		flag2 = true;
+	}
+
+	IEnumerator endOfWave() {
+		if (flag3){
+			flag3 = false;
+			StartCoroutine(trivia());
+		}
+		yield return new WaitUntil(() => answered);
+		answered = false;
+		StartCoroutine(chooseUpg());
 	}
 }
