@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class H_Scale : MonoBehaviour {
@@ -20,6 +21,11 @@ public class H_Scale : MonoBehaviour {
             float x = ph/100;
 
             transform.localScale = new Vector3(x, 0.5f, 0.25f);
-            //playerStatsScriptable = x;
+
+        if (playerStatsScriptable.currentHealth <= 0f)
+        {
+            SceneManager.LoadScene(0);
+        }
+
     }
 }
