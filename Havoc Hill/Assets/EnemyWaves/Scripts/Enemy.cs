@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour {
 	private Transform target;
 	private int wavepointIndex = 0;
 	private WaveSpawner waveSpawner;
+	public TextBoxUpdate textBoxUpdate;
 	public WaveSpawnerScriptableObject waveSpawnerScriptable;
 	public BulletScriptableObject bullet;
 	public PlayerStatsScriptableObject playerStatsScriptable;
@@ -76,6 +77,7 @@ public class Enemy : MonoBehaviour {
             Debug.Log("Enemy Dead");
             Destroy(gameObject);
 			waveSpawnerScriptable.enemiesLeft--;
+			textBoxUpdate.DisplayRandomTrivia();
         }
 	}
 }
