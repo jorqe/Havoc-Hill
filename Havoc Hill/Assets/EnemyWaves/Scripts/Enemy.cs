@@ -51,6 +51,7 @@ public class Enemy : MonoBehaviour {
 				return;
 			}
 			target = Waypoints2.points[wavepointIndex];
+			transform.LookAt(target);
 		}
 
 		if(waypointsNum == 3) {
@@ -61,18 +62,19 @@ public class Enemy : MonoBehaviour {
 				return;
 			}
 			target = Waypoints3.points[wavepointIndex];
+			transform.LookAt(target);
 		}
 
 		wavepointIndex++;
 	}
 	
-	void OnTriggerEnter(Collider other){
-		if (other.CompareTag("Bullet")){
+	void OnTriggerEnter(Collider other) {
+		if (other.CompareTag("Bullet")) {
             Debug.Log("Enemy health: " + health);
             health -= bullet.bulletDamage;
         }
 
-        if (health <= 0){
+        if (health <= 0) {
             Debug.Log("Enemy Dead");
             Destroy(gameObject);
 			waveSpawnerScriptable.enemiesLeft--;
