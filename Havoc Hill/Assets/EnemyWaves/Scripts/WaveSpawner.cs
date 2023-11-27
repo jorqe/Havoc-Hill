@@ -14,6 +14,7 @@ public class WaveSpawner : MonoBehaviour {
 	[SerializeField] private List<int> wave = new();
 	private bool readyToCountDown = false;
 	public WaveSpawnerScriptableObject waveSpawnerScriptable;
+	public TextBoxUpdate textBoxUpdate;
 	public GameObject button1;
 	public GameObject button2;
 	public GameObject button3;
@@ -33,6 +34,7 @@ public class WaveSpawner : MonoBehaviour {
 
 		if (waveSpawnerScriptable.enemiesLeft == 0) {
 			StartCoroutine(chooseUpg());
+			textBoxUpdate.DisplayRandomTrivia();
 			readyToCountDown = true;
 		}
 	}
