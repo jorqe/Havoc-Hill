@@ -147,3 +147,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
+  questionInterface: {fileID: 0}

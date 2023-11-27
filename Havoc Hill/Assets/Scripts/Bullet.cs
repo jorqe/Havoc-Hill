@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public BulletScriptableObject bulletSO;
     static public float bulletSpeed = 10;
+    //public GameObject questionInterface;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +18,9 @@ public class Bullet : MonoBehaviour
     {
         
     }
-    /*
+   /* 
     void OnTriggerEnter (Collider other){
+        
         if (other.CompareTag("SpeedUpg")){
             Debug.Log("in if statement");
             bulletSO.bulletSpeed += bulletSpeed;
@@ -29,6 +31,12 @@ public class Bullet : MonoBehaviour
             bulletSO.bulletDamage += 2;
             Destroy(gameObject);
         }
+       
+
+        if (other.CompareTag("True") || other.CompareTag("False")){
+            questionInterface.SetActive(false);
+        }
+        
     }
     */
 }

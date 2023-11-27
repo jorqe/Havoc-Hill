@@ -15,9 +15,12 @@ public class WaveSpawner : MonoBehaviour {
 	private bool readyToCountDown = false;
 	public WaveSpawnerScriptableObject waveSpawnerScriptable;
 	public TextBoxUpdate textBoxUpdate;
+	public GameObject questionInterface;
 	public GameObject button1;
 	public GameObject button2;
 	public GameObject button3;
+	public bool flag = false;
+	public bool flag2 = true;
 
 	void Update() {
 
@@ -33,8 +36,14 @@ public class WaveSpawner : MonoBehaviour {
 		}
 
 		if (waveSpawnerScriptable.enemiesLeft == 0) {
-			StartCoroutine(chooseUpg());
-			textBoxUpdate.DisplayRandomTrivia();
+			if (flag){
+				StartCoroutine(trivia());
+				flag = false;
+			}
+
+			if(flag2){
+				StartCoroutine(chooseUpg());
+			}
 			readyToCountDown = true;
 		}
 	}
@@ -74,5 +83,14 @@ public class WaveSpawner : MonoBehaviour {
 		button2.SetActive(true);
 		button3.SetActive(true);
 		yield return new WaitUntil(() => (!button1.activeSelf || !button2.activeSelf || !button3.activeSelf));
+		flag = true;
+	}
+
+	IEnumerator trivia() {
+		flag2 = false;
+		questionInterface.SetActive(true);
+		textBoxUpdate.DisplayRandomTrivia();
+		yield return new WaitUntil(() => !questionInterface.activeSelf);
+		flag2 = true;
 	}
 }
