@@ -441,7 +441,8 @@ PrefabInstance:
       value: Desk FBX (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -2845779275431937956, guid: 4086c5dff83811345a83e839e7689413, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8891792828147989070, guid: 4086c5dff83811345a83e839e7689413, type: 3}
       insertIndex: 5
@@ -767,7 +768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &323408066
 Transform:
   m_ObjectHideFlags: 0
@@ -1005,7 +1006,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: e28490e1e4f53ff4d91f38f8c379ce03, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -2845779275431937956, guid: 4086c5dff83811345a83e839e7689413, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4086c5dff83811345a83e839e7689413, type: 3}
@@ -1286,7 +1288,8 @@ PrefabInstance:
       value: Desk FBX
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -2845779275431937956, guid: 4086c5dff83811345a83e839e7689413, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4086c5dff83811345a83e839e7689413, type: 3}
@@ -2346,7 +2349,8 @@ PrefabInstance:
       value: Desk FBX (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -2845779275431937956, guid: 4086c5dff83811345a83e839e7689413, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4086c5dff83811345a83e839e7689413, type: 3}
@@ -38542,7 +38546,8 @@ PrefabInstance:
       value: Desk FBX (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -2845779275431937956, guid: 4086c5dff83811345a83e839e7689413, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4086c5dff83811345a83e839e7689413, type: 3}
@@ -38757,7 +38762,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: e28490e1e4f53ff4d91f38f8c379ce03, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -2845779275431937956, guid: 4086c5dff83811345a83e839e7689413, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4086c5dff83811345a83e839e7689413, type: 3}
@@ -39242,7 +39248,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: e28490e1e4f53ff4d91f38f8c379ce03, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -2845779275431937956, guid: 4086c5dff83811345a83e839e7689413, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4086c5dff83811345a83e839e7689413, type: 3}
@@ -40172,7 +40179,8 @@ PrefabInstance:
       value: Desk FBX (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -2845779275431937956, guid: 4086c5dff83811345a83e839e7689413, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4086c5dff83811345a83e839e7689413, type: 3}
@@ -41118,7 +41126,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: e28490e1e4f53ff4d91f38f8c379ce03, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -2845779275431937956, guid: 4086c5dff83811345a83e839e7689413, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4086c5dff83811345a83e839e7689413, type: 3}
@@ -41642,7 +41651,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: e28490e1e4f53ff4d91f38f8c379ce03, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -2845779275431937956, guid: 4086c5dff83811345a83e839e7689413, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4086c5dff83811345a83e839e7689413, type: 3}
