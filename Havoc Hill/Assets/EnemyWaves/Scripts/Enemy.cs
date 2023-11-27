@@ -40,6 +40,7 @@ public class Enemy : MonoBehaviour {
 				return;
 			}
 			target = Waypoints.points[wavepointIndex];
+			transform.LookAt(target);
 		}
 
 		if(waypointsNum == 2) {
