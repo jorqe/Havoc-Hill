@@ -36,6 +36,8 @@ public class Shoot : MonoBehaviour
 
     public IEnumerator shootBullet(){
         while (true){
+            Debug.Log("bullet speed = " + bulletSO.bulletSpeed);
+            Debug.Log("bullet damage = " + bulletSO.bulletDamage);
             fireSpeed = bulletSO.bulletSpeed;
             GameObject spawnedBullet = Instantiate(bullet);
             spawnedBullet.transform.position = spawnPoint.position;
