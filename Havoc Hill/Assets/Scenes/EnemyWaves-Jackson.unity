@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.41755342, g: 0.55466294, b: 0.685885, a: 1}
+  m_IndirectSpecularColor: {r: 0.41763794, g: 0.55508715, b: 0.68560433, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15403,8 +15403,11 @@ MonoBehaviour:
   bullet: {fileID: 652795438935812385, guid: e4539e0602ab3784fbb057dbd391bad5, type: 3}
   spawnPoint: {fileID: 378690701}
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
+  fireSound: {fileID: 0}
+  audioSource: {fileID: 0}
   fireSpeed: 0
   rate: 1
+  volume: 0.5
 --- !u!114 &375243291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27430,8 +27433,11 @@ MonoBehaviour:
   bullet: {fileID: 2069901182}
   spawnPoint: {fileID: 812097188}
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
+  fireSound: {fileID: 0}
+  audioSource: {fileID: 0}
   fireSpeed: 0
   rate: 1
+  volume: 0.5
 --- !u!114 &692256542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52808,8 +52814,11 @@ MonoBehaviour:
   bullet: {fileID: 2069901182}
   spawnPoint: {fileID: 514028413}
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
+  fireSound: {fileID: 0}
+  audioSource: {fileID: 0}
   fireSpeed: 0
   rate: 1
+  volume: 0.5
 --- !u!114 &1342270327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67055,8 +67064,11 @@ MonoBehaviour:
   bullet: {fileID: 652795438935812385, guid: e4539e0602ab3784fbb057dbd391bad5, type: 3}
   spawnPoint: {fileID: 812097188}
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
+  fireSound: {fileID: 8300000, guid: 786b24b9dcaef2443b389a84669097da, type: 3}
+  audioSource: {fileID: 0}
   fireSpeed: 0
   rate: 1
+  volume: 0.5
 --- !u!114 &1685664334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81707,8 +81719,11 @@ MonoBehaviour:
   bullet: {fileID: 0}
   spawnPoint: {fileID: 0}
   bulletSO: {fileID: 0}
+  fireSound: {fileID: 0}
+  audioSource: {fileID: 0}
   fireSpeed: 0
   rate: 1
+  volume: 0.5
 --- !u!4 &2018329968
 Transform:
   m_ObjectHideFlags: 0

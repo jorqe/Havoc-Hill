@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,11 @@ public class Shoot : MonoBehaviour
     public GameObject bullet;
     public Transform spawnPoint;
     public BulletScriptableObject bulletSO;
+    public AudioClip fireSound;
+    public AudioSource audioSource;
     public float fireSpeed;
     public float rate = 1;
+    public float volume = 0.5f;
     private Coroutine _current;
     // Start is called before the first frame update
     void Start()
@@ -39,6 +43,7 @@ public class Shoot : MonoBehaviour
             Debug.Log("bullet speed = " + bulletSO.bulletSpeed);
             Debug.Log("bullet damage = " + bulletSO.bulletDamage);
             fireSpeed = bulletSO.bulletSpeed;
+            audioSource.PlayOneShot(fireSound, volume);
             GameObject spawnedBullet = Instantiate(bullet);
             spawnedBullet.transform.position = spawnPoint.position;
             spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
