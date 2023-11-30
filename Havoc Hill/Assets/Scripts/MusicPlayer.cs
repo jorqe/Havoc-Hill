@@ -13,7 +13,7 @@ public class MusicPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("LoadMainGame", 6f);
+        Invoke("LoadMainGame", 14.5f);
         
     }
     void LoadMainGame()
