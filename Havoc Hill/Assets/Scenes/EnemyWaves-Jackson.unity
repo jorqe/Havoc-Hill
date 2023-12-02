@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.418249, g: 0.5538908, b: 0.6838328, a: 1}
+  m_IndirectSpecularColor: {r: 0.41755342, g: 0.55466294, b: 0.685885, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3208,14 +3208,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74324392}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7102821, z: -0, w: 0.7039172}
-  m_LocalPosition: {x: 4.290479, y: 2.8084865, z: -0.112410426}
-  m_LocalScale: {x: 0.89393, y: 0.89393, z: 0.89393}
+  m_LocalRotation: {x: -0, y: -0.85481805, z: -0, w: -0.5189279}
+  m_LocalPosition: {x: -1.734, y: 0.742, z: -1.519}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2076083035}
   m_Father: {fileID: 1007902184}
-  m_LocalEulerAnglesHint: {x: 0, y: -90.516, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -242.521, z: 0}
 --- !u!1 &74776211
 GameObject:
   m_ObjectHideFlags: 0
@@ -12219,7 +12219,7 @@ GameObject:
   - component: {fileID: 296583748}
   - component: {fileID: 296583747}
   m_Layer: 0
-  m_Name: Revolver_LP (1)
+  m_Name: Right_Revolver_LP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50842,7 +50842,7 @@ Transform:
   m_GameObject: {fileID: 1290834720}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0294, y: -0.0027, z: -0.0357}
+  m_LocalPosition: {x: 0.0348, y: -0.018, z: -0.0368}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -53283,7 +53283,7 @@ GameObject:
   - component: {fileID: 1342270327}
   - component: {fileID: 1342270326}
   m_Layer: 0
-  m_Name: Revolver_LP
+  m_Name: Left_Revolver_LP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

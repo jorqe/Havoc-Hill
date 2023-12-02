@@ -11,9 +11,9 @@ public class Enemy : MonoBehaviour {
 	public WaveSpawnerScriptableObject waveSpawnerScriptable;
 	public BulletScriptableObject bullet;
 	public PlayerStatsScriptableObject playerStatsScriptable;
-    public AudioClip enemySound;
+    //public AudioClip enemySound;
     public float volume = 0.5f;
-    public AudioSource audioSource;
+    //public AudioSource audioSource;
 
     private void Start() {
 		if(waypointsNum == 1)
@@ -31,12 +31,12 @@ public class Enemy : MonoBehaviour {
 
 		float valueRandom = Random.value;
 		float chanceNoise = 0.1f;
-
+/*
 		if (valueRandom < chanceNoise)
 		{
             audioSource.PlayOneShot(enemySound, volume);
         }
-
+*/
 		if(Vector3.Distance(transform.position, target.position) <= 0.2f) {
 			GetNextWaypoint();
 		}
