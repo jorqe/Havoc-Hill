@@ -19,8 +19,16 @@ public class H_Scale : MonoBehaviour {
 
             float ph = playerStatsScriptable.currentHealth;
             float x = ph/100;
+            if(x > 0f)
+            {
+                transform.localScale = new Vector3(x, 0.5f, 0.25f);
+            }
+            else
+            {
+                transform.localScale = new Vector3(0.0f, 0.5f, 0.25f);
+            }
 
-            transform.localScale = new Vector3(x, 0.5f, 0.25f);
+
 
         if (playerStatsScriptable.currentHealth <= 0f)
         {

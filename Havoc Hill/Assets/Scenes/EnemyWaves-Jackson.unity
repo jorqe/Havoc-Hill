@@ -87772,9 +87772,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2132679563}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b645ad977dad82246924f983659f23fe, type: 3}
+  m_Script: {fileID: 11500000, guid: f909c5c99a5017641a17fc8ba90cfbf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
 --- !u!1001 &2136802602
 PrefabInstance:
   m_ObjectHideFlags: 0
