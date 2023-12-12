@@ -1383,16 +1383,12 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-<<<<<<< Updated upstream
-  handAnimator: {fileID: 1299462671}
-=======
   handAnimator: {fileID: 31478388}
 --- !u!95 &31478388 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5686134208192617028, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
   m_PrefabInstance: {fileID: 1299462670}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1001 &33998930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33812,16 +33808,12 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-<<<<<<< Updated upstream
-  handAnimator: {fileID: 1803613258}
-=======
   handAnimator: {fileID: 827942513}
 --- !u!95 &827942513 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 109434732388006827, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
   m_PrefabInstance: {fileID: 1803613257}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1001 &829812999
 PrefabInstance:
   m_ObjectHideFlags: 0
