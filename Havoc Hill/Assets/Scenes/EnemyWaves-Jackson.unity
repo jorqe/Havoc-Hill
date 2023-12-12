@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.418249, g: 0.5538908, b: 0.6838328, a: 1}
+  m_IndirectSpecularColor: {r: 0.41755342, g: 0.55466294, b: 0.685885, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1360,9 +1360,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinchAnimationAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
-      m_Name: 
+      m_Name: Pinch Animation
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: a0f0c580-f2ef-4d37-9a15-0e685d88447b
@@ -1370,11 +1370,11 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   gripAnimationAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
-      m_Name: 
+      m_Name: Grip Animation
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: 8568fd08-7e11-4669-84d7-0fc09c012133
@@ -1382,8 +1382,8 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
-  handAnimator: {fileID: 0}
+    m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  handAnimator: {fileID: 1299462671}
 --- !u!1001 &33998930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3288,13 +3288,12 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -0.221, y: 0.519, z: -0.107}
-
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2076083035}
   m_Father: {fileID: 1007902184}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &74776211
 GameObject:
   m_ObjectHideFlags: 0
@@ -12477,7 +12476,7 @@ GameObject:
   - component: {fileID: 296583748}
   - component: {fileID: 296583747}
   m_Layer: 0
-  m_Name: Right_Revolver_LP
+  m_Name: Revolver_RH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19406,7 +19405,6 @@ MonoBehaviour:
   button1: {fileID: 1365664868}
   button2: {fileID: 1937051909}
   button3: {fileID: 2018329966}
-  Upgrades: {fileID: 0}
   onPress:
     m_PersistentCalls:
       m_Calls: []
@@ -21589,7 +21587,7 @@ Transform:
   m_GameObject: {fileID: 514028412}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3070006, y: 0.12286426, z: 3.0507877}
+  m_LocalPosition: {x: 0.0014, y: 0.071, z: 0.1841}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23897,7 +23895,6 @@ MonoBehaviour:
   button1: {fileID: 1365664868}
   button2: {fileID: 2018329966}
   button3: {fileID: 1937051909}
-  Upgrades: {fileID: 0}
   onPress:
     m_PersistentCalls:
       m_Calls: []
@@ -25071,7 +25068,6 @@ MonoBehaviour:
   button1: {fileID: 933243896}
   button2: {fileID: 2069100669}
   button3: {fileID: 0}
-  Upgrades: {fileID: 0}
   onPress:
     m_PersistentCalls:
       m_Calls: []
@@ -33784,9 +33780,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinchAnimationAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
-      m_Name: 
+      m_Name: Pinch Animation
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: c32c5cdc-80ba-4eee-b2d5-fbd47eeeb049
@@ -33794,11 +33790,11 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   gripAnimationAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
-      m_Name: 
+      m_Name: Grip Animation
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: f07d9e32-db0a-4e04-be1f-e494600b09ad
@@ -33806,8 +33802,8 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
-  handAnimator: {fileID: 0}
+    m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  handAnimator: {fileID: 1803613258}
 --- !u!1001 &829812999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39735,6 +39731,7 @@ Transform:
   - {fileID: 1163643740}
   - {fileID: 166915287}
   - {fileID: 74324393}
+  - {fileID: 296583746}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1008622421
@@ -51797,7 +51794,7 @@ Transform:
   m_GameObject: {fileID: 1290834720}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0348, y: -0.018, z: -0.0368}
+  m_LocalPosition: {x: 0.0331, y: -0.0109, z: -0.0361}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52283,6 +52280,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 31478387}
   m_SourcePrefab: {fileID: 100100000, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
+--- !u!95 &1299462671 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5686134208192617028, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
+  m_PrefabInstance: {fileID: 1299462670}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1299803750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52580,7 +52582,6 @@ MonoBehaviour:
   button1: {fileID: 2069100669}
   button2: {fileID: 933243896}
   button3: {fileID: 0}
-  Upgrades: {fileID: 0}
   onPress:
     m_PersistentCalls:
       m_Calls: []
@@ -54355,7 +54356,7 @@ GameObject:
   - component: {fileID: 1342270327}
   - component: {fileID: 1342270326}
   m_Layer: 0
-  m_Name: Revolver_RH
+  m_Name: Revolver_LH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54386,6 +54387,7 @@ Transform:
   - {fileID: 8544106}
   - {fileID: 1068941125}
   - {fileID: 514028413}
+  - {fileID: 1290834721}
   m_Father: {fileID: 1007902184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1342270326
@@ -54476,10 +54478,34 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1342270326}
+        m_TargetAssemblyTypeName: Shoot, Assembly-CSharp
+        m_MethodName: BeginFire
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1342270326}
+        m_TargetAssemblyTypeName: Shoot, Assembly-CSharp
+        m_MethodName: StopFire
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
@@ -54510,7 +54536,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 1290834721}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
@@ -54606,8 +54632,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02000132, y: 0.9590414, z: 0.02}
-  m_Center: {x: 0.0000006603077, y: -0.46952072, z: 0.01}
+  m_Size: {x: 0.02000132, y: 0.12953281, z: 0.13675131}
+  m_Center: {x: 0.0000006603077, y: -0.011897683, z: -0.04837566}
 --- !u!23 &1342270330
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57390,9 +57416,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1424850704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b645ad977dad82246924f983659f23fe, type: 3}
+  m_Script: {fileID: 11500000, guid: f909c5c99a5017641a17fc8ba90cfbf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthSlider: {fileID: 794105357}
 --- !u!1001 &1426100662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65215,7 +65242,6 @@ MonoBehaviour:
   button1: {fileID: 1937051909}
   button2: {fileID: 1365664868}
   button3: {fileID: 2018329966}
-  Upgrades: {fileID: 0}
   onPress:
     m_PersistentCalls:
       m_Calls: []
@@ -74918,6 +74944,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 827942512}
   m_SourcePrefab: {fileID: 100100000, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
+--- !u!95 &1803613258 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 109434732388006827, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
+  m_PrefabInstance: {fileID: 1803613257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1806367056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89155,8 +89186,11 @@ MonoBehaviour:
   bullet: {fileID: 2069901182}
   spawnPoint: {fileID: 299931875}
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
+  fireSound: {fileID: 0}
+  audioSource: {fileID: 0}
   fireSpeed: 0
   rate: 1
+  volume: 0.5
 --- !u!114 &2115181301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90544,7 +90578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f909c5c99a5017641a17fc8ba90cfbf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSlider: {fileID: 0}
+  healthSlider: {fileID: 794105357}
 --- !u!1001 &2136802602
 PrefabInstance:
   m_ObjectHideFlags: 0

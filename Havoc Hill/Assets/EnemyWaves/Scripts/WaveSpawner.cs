@@ -24,6 +24,10 @@ public class WaveSpawner : MonoBehaviour {
 	public bool flag2 = true;
 	public bool flag3 = true;
 
+	void Start() {
+		waveSpawnerScriptable.enemiesLeft = 0;
+	}
+
 	void Update() {
 		Debug.Log("Enemies left = " + waveSpawnerScriptable.enemiesLeft);
 
