@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/UI-Jorqe/UI-Jorge.unity
+    path: Assets/Scenes/UI-Jorge.unity
     guid: 8061af27cf0e25e4490fa6aa20af52a1
   - enabled: 1
     path: Assets/Scenes/SplashScreen.unity
