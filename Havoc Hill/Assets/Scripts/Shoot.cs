@@ -40,8 +40,6 @@ public class Shoot : MonoBehaviour
 
     public IEnumerator shootBullet(){
         while (true){
-            Debug.Log("bullet speed = " + bulletSO.bulletSpeed);
-            Debug.Log("bullet damage = " + bulletSO.bulletDamage);
             fireSpeed = bulletSO.bulletSpeed;
             audioSource.PlayOneShot(fireSound, volume);
             GameObject spawnedBullet = Instantiate(bullet);

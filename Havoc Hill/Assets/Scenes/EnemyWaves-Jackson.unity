@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.41755342, g: 0.55466294, b: 0.685885, a: 1}
+  m_IndirectSpecularColor: {r: 0.418249, g: 0.5538908, b: 0.6838328, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1347,12 +1347,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5686134208185136530, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
   m_PrefabInstance: {fileID: 1299462670}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &31478388 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5686134208192617028, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
-  m_PrefabInstance: {fileID: 1299462670}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &31478389
+--- !u!114 &31478387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1361,34 +1356,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 31478385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb705677aa46d7b4983651e284b1782e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c52ba7740179424b853db75145cc6ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pinchAnimationAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
-      m_Name: Pinch Animation
+      m_Name: 
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: aedb2f0e-24e8-405a-8475-341b0fac6b41
+      m_Id: a0f0c580-f2ef-4d37-9a15-0e685d88447b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_Reference: {fileID: 0}
   gripAnimationAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
-      m_Name: Grip Animation
+      m_Name: 
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 048c870b-6e70-4484-92f2-373b43e061dc
+      m_Id: 8568fd08-7e11-4669-84d7-0fc09c012133
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  handAnimator: {fileID: 31478388}
+    m_Reference: {fileID: 0}
+  handAnimator: {fileID: 0}
 --- !u!1001 &33998930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21111,7 +21106,7 @@ Transform:
   m_GameObject: {fileID: 514028412}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0012, y: 0.0694, z: 0.1769}
+  m_LocalPosition: {x: 3.3070006, y: 0.12286426, z: 3.0507877}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33080,12 +33075,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 109434732395451517, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
   m_PrefabInstance: {fileID: 1803613257}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &827942513 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 109434732388006827, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
-  m_PrefabInstance: {fileID: 1803613257}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &827942514
+--- !u!114 &827942512
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33094,34 +33084,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 827942510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb705677aa46d7b4983651e284b1782e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c52ba7740179424b853db75145cc6ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pinchAnimationAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
-      m_Name: Pinch Animation
+      m_Name: 
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 6a1270bb-1adc-4e62-9a90-f99a1a5bcc92
+      m_Id: c32c5cdc-80ba-4eee-b2d5-fbd47eeeb049
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_Reference: {fileID: 0}
   gripAnimationAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
-      m_Name: Grip Animation
+      m_Name: 
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 52ba025f-baec-44b9-a1a4-ddb6525aa9f4
+      m_Id: f07d9e32-db0a-4e04-be1f-e494600b09ad
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  handAnimator: {fileID: 827942513}
+    m_Reference: {fileID: 0}
+  handAnimator: {fileID: 0}
 --- !u!1001 &829812999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50817,6 +50807,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 880970725214738984, guid: c60edd51c065ceb46b345849a03bc106, type: 3}
   m_PrefabInstance: {fileID: 1289807228}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &1290834720
 GameObject:
   m_ObjectHideFlags: 0
@@ -50848,6 +50839,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1342270325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of f4d993e (Implemented the revolver gun)
 --- !u!1001 &1291135253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51326,7 +51319,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5686134208185362930, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 31478389}
+      addedObject: {fileID: 31478387}
   m_SourcePrefab: {fileID: 100100000, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
 --- !u!1001 &1299803750
 PrefabInstance:
@@ -53298,7 +53291,7 @@ Transform:
   m_GameObject: {fileID: 1342270324}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6305, y: -0.27769995, z: -1.1526}
+  m_LocalPosition: {x: 0.6204, y: -0.27769995, z: -1.567}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -53314,7 +53307,6 @@ Transform:
   - {fileID: 8544106}
   - {fileID: 1068941125}
   - {fileID: 514028413}
-  - {fileID: 1290834721}
   m_Father: {fileID: 1007902184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1342270326
@@ -53405,34 +53397,10 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1342270326}
-        m_TargetAssemblyTypeName: Shoot, Assembly-CSharp
-        m_MethodName: BeginFire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_Deactivated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1342270326}
-        m_TargetAssemblyTypeName: Shoot, Assembly-CSharp
-        m_MethodName: StopFire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
@@ -53463,7 +53431,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 1290834721}
+  m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
@@ -53559,8 +53527,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02000132, y: 0.12953281, z: 0.13675131}
-  m_Center: {x: 0.0000006603077, y: -0.011897683, z: -0.04837566}
+  m_Size: {x: 0.02000132, y: 0.9590414, z: 0.02}
+  m_Center: {x: 0.0000006603077, y: -0.46952072, z: 0.01}
 --- !u!23 &1342270330
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -73231,7 +73199,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 827942514}
+      addedObject: {fileID: 827942512}
   m_SourcePrefab: {fileID: 100100000, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
 --- !u!1001 &1806367056
 PrefabInstance:
