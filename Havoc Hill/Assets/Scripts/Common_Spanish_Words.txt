@@ -1,29 +1,30 @@
-El|(The, Masculine, Singular)|Grammatical Article
-La|(The, Feminine, Singular)|Grammatical Article  
-Los|(The, Masculine, Plural)|Grammatical Article  
-Las|(The, Feminine, Plural)|Grammatical Article  
-Que|(That, Than)|Grammatical Article  
-Y|(And)|Grammatical Article  
-A|(To, At)|Grammatical Article  
-En|(In, On)|Grammatical Article  
-Un|(A, Masculine)|Grammatical Article  
-Una|(A, Feminine)|Grammatical Article  
-Ser|(To Be (Permanent))|Verb  
-Haber|(To Have)|Verb  
-Estar|(To Be (Conditions))|Verb  
-Decir|(To Say)|Verb  
-Poder|(To Be Able To)|Verb  
-Hacer|(To Do|Make)|Verb  
-Ver|(To See)|Verb  
-Dar|(To Give)|Verb  
-Saber|(To Know)|Verb  
-Nos|(Us)|Gramatical Article  
-Llegar|(To Arrive)|Verb  
-Quedar|(To Remain)|Verb  
-Creer|(To Believe)|Verb  
-Hablar|(To Talk)|Verb  
-Llevar|(To Take)|Verb  
-Dejar|(To Leave)|Verb  
-Seguir|(To Continue)|Verb  
-Encontrar|(To Find)|Verb  
-Con|(With)|Preposition  
+In Spanish, adjectives generally come after the noun.
+The verb "ser" is used for temporary states or conditions.
+Spanish is a Romance language derived from Latin.
+The word "amigo" is a feminine noun in Spanish.
+"Por" and "para" are interchangeable prepositions in Spanish.
+Spanish uses the same definite article ("the") for both masculine and feminine nouns.
+The subjunctive mood is used to express certainty.
+Spanish is spoken in only one country.
+The verb "tener" is used to indicate age in Spanish.
+"Ser" is used to express origin or possession.
+In Spanish, nouns have gender, and this affects the forms of articles and adjectives.
+The preposition "en" is used to indicate time duration.
+The future tense in Spanish is formed using the verb "haber."
+Spanish has only one past tense.
+"Hasta luego" means "see you later" in English.
+The letter "ñ" is a separate letter in the Spanish alphabet.
+The verb "gustar" is used to express likes and dislikes.
+All Spanish-speaking countries use the same vocabulary and expressions.
+"Biblioteca" means "bookstore" in Spanish.
+Spanish uses the same word order as English in sentences.
+"Estar" is used to indicate location or position.
+"Cinco" is spelled with an "s" in Spanish.
+The verb "poder" is used to express ability or permission.
+Spanish has a formal and informal way of addressing people.
+"Año" means "day" in Spanish.
+The Spanish language has more than one future tense.
+The conditional tense is used to express hypothetical situations.
+The verb "decir" means "to see" in Spanish.
+Spanish has a gender-neutral pronoun.
+"Hablar" is an irregular verb in Spanish.
