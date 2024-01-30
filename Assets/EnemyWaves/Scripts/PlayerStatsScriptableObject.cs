@@ -4,5 +4,5 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerStatsScriptableObject", menuName = "ScriptableObjects/PlayerStats")]
 public class PlayerStatsScriptableObject : ScriptableObject {
-    public int currentHealth = 100;
+    public int currentHealth = 225;
 }

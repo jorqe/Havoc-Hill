@@ -20,6 +20,11 @@ public class TextBoxUpdate : MonoBehaviour
         if (lines != null && lines.Length > 0)
         {
             int index = Random.Range(0, lines.Length); // Pick a random line
+            int lmod = (index % 2); //Text file starts with a question, then it's answer, alternating
+            if (lmod == 1)
+            {
+                index++;
+            }
             string trivia_bit = lines[index];
             // Display trivia/lesson on the screen using UI Text
             displayText.text = trivia_bit;

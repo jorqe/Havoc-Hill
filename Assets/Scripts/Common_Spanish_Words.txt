@@ -1,30 +1,55 @@
 In Spanish, adjectives generally come after the noun.
+True
 The verb "ser" is used for temporary states or conditions.
+False
 Spanish is a Romance language derived from Latin.
+True
 The word "amigo" is a feminine noun in Spanish.
+False
 "Por" and "para" are interchangeable prepositions in Spanish.
+False
 Spanish uses the same definite article ("the") for both masculine and feminine nouns.
+False
 The subjunctive mood is used to express certainty.
+False
 Spanish is spoken in only one country.
+False
 The verb "tener" is used to indicate age in Spanish.
+True
 "Ser" is used to express origin or possession.
+True
 In Spanish, nouns have gender, and this affects the forms of articles and adjectives.
+True
 The preposition "en" is used to indicate time duration.
-The future tense in Spanish is formed using the verb "haber."
+True
 Spanish has only one past tense.
+False
 "Hasta luego" means "see you later" in English.
+True
 The letter "ñ" is a separate letter in the Spanish alphabet.
+True
 The verb "gustar" is used to express likes and dislikes.
+True
 All Spanish-speaking countries use the same vocabulary and expressions.
+False
 "Biblioteca" means "bookstore" in Spanish.
+True
 Spanish uses the same word order as English in sentences.
+Flase
 "Estar" is used to indicate location or position.
-"Cinco" is spelled with an "s" in Spanish.
+True
 The verb "poder" is used to express ability or permission.
 Spanish has a formal and informal way of addressing people.
+True
 "Año" means "day" in Spanish.
+False
 The Spanish language has more than one future tense.
+True
 The conditional tense is used to express hypothetical situations.
+True
 The verb "decir" means "to see" in Spanish.
+False
 Spanish has a gender-neutral pronoun.
+False
 "Hablar" is an irregular verb in Spanish.
+True
