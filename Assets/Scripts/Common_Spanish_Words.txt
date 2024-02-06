@@ -1,55 +1,81 @@
+Adjectives come after the noun in Spanish; for examples, a white car would be "carro blanco"!
 In Spanish, adjectives generally come after the noun.
 True
+"Ser" is used for permanent states of being.
 The verb "ser" is used for temporary states or conditions.
 False
+Spanish is one of the world's most spoken languages; 75% is derived from Latin!
 Spanish is a Romance language derived from Latin.
 True
+Nouns endings in consonants like -n, -r, -s, -l, -x, or -y are masculine.
 The word "amigo" is a feminine noun in Spanish.
 False
+"Por" and "para" are different version of "for"; para looks into the future, para into the past.
 "Por" and "para" are interchangeable prepositions in Spanish.
 False
+Spanish has two different definite articles; "el" is the masculine, "la" is the feminine.
 Spanish uses the same definite article ("the") for both masculine and feminine nouns.
 False
+Like the name implies, the subjunctive mood implies someone's perception of something; it's not certain!
 The subjunctive mood is used to express certainty.
 False
+Spanish is the primary language of over 20 countries!
 Spanish is spoken in only one country.
 False
+To talk about age, Spanish has you use "tener", the verb meaning "to have".
 The verb "tener" is used to indicate age in Spanish.
 True
+"Ser" is a Spanish word meaning "to be"; it expresses origins, identity, and more!
 "Ser" is used to express origin or possession.
 True
+Similar to English, Spanish nouns have gender and words will change depending on gender.
 In Spanish, nouns have gender, and this affects the forms of articles and adjectives.
 True
+Much like in English how we say "in 30 minutes", "en" is used to indicate time duration!
 The preposition "en" is used to indicate time duration.
 True
+Spanish has four past tenses; simple past, imperfect past, present perfect, past perfect!
 Spanish has only one past tense.
 False
+"Hasta luego" is a common goodbye in Spanish; it means see you later!
 "Hasta luego" means "see you later" in English.
 True
+The Spanish alphabet is very similar to the English one; it has an extra letter in "ñ".
 The letter "ñ" is a separate letter in the Spanish alphabet.
 True
+"Gustar" is how you express likes and dislikes; for example, "me gusto" means "I like"!
 The verb "gustar" is used to express likes and dislikes.
 True
+Certain Spanish-speaking regions and countries will have their own dialect!
 All Spanish-speaking countries use the same vocabulary and expressions.
 False
+"Biblioteca" means "bookstore" and "libreria" means "library"; the two can often be switched!
 "Biblioteca" means "bookstore" in Spanish.
 True
+Spanish word order is different than English's; the basic order is subject + verb + object!
 Spanish uses the same word order as English in sentences.
-Flase
+False
+"Estar" is a form of the verb "to be"; it expresses temporary states, like location!
 "Estar" is used to indicate location or position.
 True
 The verb "poder" is used to express ability or permission.
 Spanish has a formal and informal way of addressing people.
 True
+"Dia" means "day" in Spanish; "mes" means "month", and "año" means "year"!
 "Año" means "day" in Spanish.
 False
+There are four future tenses; simple future, future continuous, future perfect, and future perfect continuous!
 The Spanish language has more than one future tense.
 True
-The conditional tense is used to express hypothetical situations.
+The condtional form is used to talk about probable futures; i.e "I will do ____".
+The conditional tense can be used to express hypothetical situations.
 True
+"Decir" is a verb meaning "to say"; don't confuse it with "hablar", "to speak"!
 The verb "decir" means "to see" in Spanish.
 False
+Though in recent years people have come up with gender-neutral pronouns, there doesn't traditionally exist one in Spanish.
 Spanish has a gender-neutral pronoun.
 False
+Certain verbs are irregular in Spanish; "hablar" and "ser" are among them!
 "Hablar" is an irregular verb in Spanish.
 True
