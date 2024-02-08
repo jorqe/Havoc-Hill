@@ -10,6 +10,7 @@ public class ButtonVR : MonoBehaviour
     public GameObject button1;
     public GameObject button2;
     public GameObject button3;
+    public GameObject upgradeGUI;
     public TMP_Text UpgDesc1;
     public TMP_Text UpgDesc2;
     public TMP_Text UpgDesc3;
@@ -134,6 +135,7 @@ public class ButtonVR : MonoBehaviour
             button1.SetActive(false);
             button2.SetActive(false);
             button3.SetActive(false);
+            upgradeGUI.SetActive(false);
         }
     }
 }

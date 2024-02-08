@@ -32,10 +32,14 @@ public class Upgrades : MonoBehaviour
 
     public void FireRateUPG(){
         Debug.Log("in FireRateUPG");
+        bulletSO.fireRate += 1;
+        Debug.Log("fireRate = " + bulletSO.fireRate);
     }
 
     public void CritUPG(){
         Debug.Log("in CritUPG");
+        bulletSO.critChance += 1;
+        Debug.Log("critChance = " + bulletSO.critChance);
     }
 
     public void HealUPG(){

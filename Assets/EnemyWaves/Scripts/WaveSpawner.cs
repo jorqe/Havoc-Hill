@@ -19,6 +19,7 @@ public class WaveSpawner : MonoBehaviour {
 	public GameObject button1;
 	public GameObject button2;
 	public GameObject button3;
+	public GameObject upgradeGUI;
 	public bool flag = false;
 	public bool answered = false;
 	public bool flag2 = true;
@@ -91,6 +92,7 @@ public class WaveSpawner : MonoBehaviour {
 		button1.SetActive(true);
 		button2.SetActive(true);
 		button3.SetActive(true);
+		upgradeGUI.SetActive(true);
 		yield return new WaitUntil(() => (!button1.activeSelf || !button2.activeSelf || !button3.activeSelf));
 		flag = false;
 		flag3 = true;

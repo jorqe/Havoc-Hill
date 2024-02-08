@@ -80,9 +80,18 @@ public class Enemy : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter(Collider other) {
+		bool crit;
 		if (other.CompareTag("Bullet")) {
             Debug.Log("Enemy health: " + health);
-            health -= bullet.bulletDamage;
+			crit = bullet.CalculateCrit(bullet.critChance);
+			if (crit){
+				health = health - (2 * bullet.bulletDamage);
+			}
+			else{
+            	health -= bullet.bulletDamage;
+			}
+
+			Debug.Log("Enemy health: " + health);
         }
 
         if (health <= 0) {
@@ -91,4 +100,5 @@ public class Enemy : MonoBehaviour {
 			waveSpawnerScriptable.enemiesLeft--;
         }
 	}
+
 }

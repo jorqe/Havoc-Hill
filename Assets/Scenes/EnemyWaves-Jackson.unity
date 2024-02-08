@@ -4827,7 +4827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
-  player: {fileID: 0}
+  player: {fileID: 11400000, guid: 21f263f98f36367428ee75e7287aa09a, type: 2}
 --- !u!1001 &110654185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12545,7 +12545,7 @@ MonoBehaviour:
   fireSound: {fileID: 0}
   audioSource: {fileID: 0}
   fireSpeed: 0
-  rate: 1
+  rate: 5
   volume: 0.5
 --- !u!114 &296583748
 MonoBehaviour:
@@ -12630,19 +12630,7 @@ MonoBehaviour:
         m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 296583747}
-        m_TargetAssemblyTypeName: Shoot, Assembly-CSharp
-        m_MethodName: StopFire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
@@ -19422,6 +19410,7 @@ MonoBehaviour:
   button1: {fileID: 1365664868}
   button2: {fileID: 1937051909}
   button3: {fileID: 2018329966}
+  upgradeGUI: {fileID: 1365135083}
   UpgDesc1: {fileID: 1625038568}
   UpgDesc2: {fileID: 935782440}
   UpgDesc3: {fileID: 1280640905}
@@ -23916,6 +23905,7 @@ MonoBehaviour:
   button1: {fileID: 1365664868}
   button2: {fileID: 2018329966}
   button3: {fileID: 1937051909}
+  upgradeGUI: {fileID: 1365135083}
   UpgDesc1: {fileID: 1625038568}
   UpgDesc2: {fileID: 935782440}
   UpgDesc3: {fileID: 1280640905}
@@ -38729,6 +38719,7 @@ MonoBehaviour:
   button1: {fileID: 1365664868}
   button2: {fileID: 1937051909}
   button3: {fileID: 2018329966}
+  upgradeGUI: {fileID: 1365135083}
   flag: 0
   answered: 0
   flag2: 1
@@ -46010,6 +46001,7 @@ MonoBehaviour:
   button1: {fileID: 1365664868}
   button2: {fileID: 1937051909}
   button3: {fileID: 2018329966}
+  upgradeGUI: {fileID: 1365135083}
   flag: 0
   answered: 0
   flag2: 1
@@ -54361,19 +54353,7 @@ MonoBehaviour:
         m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1342270326}
-        m_TargetAssemblyTypeName: Shoot, Assembly-CSharp
-        m_MethodName: StopFire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
@@ -55703,7 +55683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1365135084
 Transform:
   m_ObjectHideFlags: 0
@@ -55713,7 +55693,7 @@ Transform:
   m_GameObject: {fileID: 1365135083}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.01, y: 2.1914527, z: -1.8223248}
+  m_LocalPosition: {x: 0.19, y: 2.028, z: -1.668}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -65006,6 +64986,7 @@ MonoBehaviour:
   button1: {fileID: 1937051909}
   button2: {fileID: 1365664868}
   button3: {fileID: 2018329966}
+  upgradeGUI: {fileID: 1365135083}
   UpgDesc1: {fileID: 1625038568}
   UpgDesc2: {fileID: 935782440}
   UpgDesc3: {fileID: 1280640905}
@@ -71390,6 +71371,7 @@ MonoBehaviour:
   button1: {fileID: 1365664868}
   button2: {fileID: 1937051909}
   button3: {fileID: 2018329966}
+  upgradeGUI: {fileID: 1365135083}
   flag: 0
   answered: 0
   flag2: 1

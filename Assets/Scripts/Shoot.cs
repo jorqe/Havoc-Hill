@@ -12,7 +12,6 @@ public class Shoot : MonoBehaviour
     public AudioClip fireSound;
     public AudioSource audioSource;
     public float fireSpeed;
-    public float rate = 1;
     public float volume = 0.5f;
     private Coroutine _current;
     // Start is called before the first frame update
@@ -29,9 +28,8 @@ public class Shoot : MonoBehaviour
     }
 
     public void BeginFire() {
-        if (_current != null) StopCoroutine(_current);
-
-        _current = StartCoroutine(shootBullet());
+        if (_current == null)
+            _current = StartCoroutine(shootBullet());
     }
 
     public void StopFire() {
@@ -39,19 +37,16 @@ public class Shoot : MonoBehaviour
     }
 
     public IEnumerator shootBullet(){
-        while (true){
-            fireSpeed = bulletSO.bulletSpeed;
-            audioSource.PlayOneShot(fireSound, volume);
-            GameObject spawnedBullet = Instantiate(bullet);
-            spawnedBullet.transform.position = spawnPoint.position;
-            spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
-            Destroy(spawnedBullet, 5);
+        fireSpeed = bulletSO.bulletSpeed;
+        audioSource.PlayOneShot(fireSound, volume);
+        GameObject spawnedBullet = Instantiate(bullet);
+        spawnedBullet.transform.position = spawnPoint.position;
+        spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
+        Destroy(spawnedBullet, 5);
 
-            yield return new WaitForSeconds(1f / rate);
-        }
+        yield return new WaitForSeconds(1f / bulletSO.fireRate);
+        _current = null;
+
     }
 
-    public void changeRate() {
-        rate += 1;
-    }
 }
