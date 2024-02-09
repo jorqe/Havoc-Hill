@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
@@ -14,6 +15,14 @@ public class Enemy : MonoBehaviour {
     //public AudioClip enemySound;
     public float volume = 0.5f;
     //public AudioSource audioSource;
+	public GameObject deathSmokePrefab;
+	public GameObject damageSmokePrefab;
+
+	Renderer ren;
+
+	void Awake() {
+		ren = GetComponent<Renderer>();
+	}
 
     private void Start() {
 		if(waypointsNum == 1)
@@ -47,6 +56,7 @@ public class Enemy : MonoBehaviour {
 			if(wavepointIndex >= Waypoints.points.Length) {
 				Destroy(gameObject);
 				waveSpawnerScriptable.enemiesLeft--;
+				smoke(damageSmokePrefab);
 				playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
 				return;
 			}
@@ -58,6 +68,7 @@ public class Enemy : MonoBehaviour {
 			if(wavepointIndex >= Waypoints2.points.Length) {
 				Destroy(gameObject);
 				waveSpawnerScriptable.enemiesLeft--;
+				smoke(damageSmokePrefab);
 				playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
 				return;
 			}
@@ -69,6 +80,7 @@ public class Enemy : MonoBehaviour {
 			if(wavepointIndex >= Waypoints3.points.Length) {
 				Destroy(gameObject);
 				waveSpawnerScriptable.enemiesLeft--;
+				smoke(damageSmokePrefab);
 				playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
 				return;
 			}
@@ -78,19 +90,37 @@ public class Enemy : MonoBehaviour {
 
 		wavepointIndex++;
 	}
+
+	IEnumerator collideFlash() {
+    	Material m = this.ren.material;
+    	Color32 c = this.ren.material.color;
+
+    	this.ren.material = null;
+    	this.ren.material.color = Color.white;
+    	yield return new WaitForSeconds(0.1f);
+    	this.ren.material = m;
+    	this.ren.material.color = c;            
+	}
 	
+	IEnumerator smoke(GameObject smokeType) {
+		GameObject temp = Instantiate(smokeType, gameObject.transform);
+		temp.transform.SetParent(null);
+		yield return new WaitForSeconds(3);
+		Destroy(temp);
+	}
+
 	void OnTriggerEnter(Collider other) {
 		bool crit;
 		if (other.CompareTag("Bullet")) {
             Debug.Log("Enemy health: " + health);
-			crit = bullet.CalculateCrit(bullet.critChance);
-			if (crit){
+            crit = bullet.CalculateCrit(bullet.critChance);
+			if (crit) {
 				health = health - (2 * bullet.bulletDamage);
-			}
-			else{
+				collideFlash();
+			} else {
             	health -= bullet.bulletDamage;
+				collideFlash();
 			}
-
 			Debug.Log("Enemy health: " + health);
         }
 
@@ -98,6 +128,7 @@ public class Enemy : MonoBehaviour {
             Debug.Log("Enemy Dead");
             Destroy(gameObject);
 			waveSpawnerScriptable.enemiesLeft--;
+			smoke(deathSmokePrefab);
         }
 	}
 
