@@ -12544,8 +12544,19 @@ MonoBehaviour:
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
   fireSound: {fileID: 0}
   audioSource: {fileID: 0}
+  triggerButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Trigger Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: a851c990-9eca-4a70-becd-5e28f9aa47a4
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   fireSpeed: 0
-  rate: 5
   volume: 0.5
 --- !u!114 &296583748
 MonoBehaviour:
@@ -16125,8 +16136,19 @@ MonoBehaviour:
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
   fireSound: {fileID: 0}
   audioSource: {fileID: 0}
+  triggerButton:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: de00e333-fdd2-4f4e-bd70-c0a1ce1f61e6
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   fireSpeed: 0
-  rate: 1
   volume: 0.5
 --- !u!114 &375243291
 MonoBehaviour:
@@ -54267,8 +54289,19 @@ MonoBehaviour:
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
   fireSound: {fileID: 0}
   audioSource: {fileID: 0}
+  triggerButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Trigger Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 11485f33-fabf-40ee-b35c-090488acdcaf
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   fireSpeed: 0
-  rate: 1
   volume: 0.5
 --- !u!114 &1342270327
 MonoBehaviour:
@@ -69272,8 +69305,19 @@ MonoBehaviour:
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
   fireSound: {fileID: 8300000, guid: 786b24b9dcaef2443b389a84669097da, type: 3}
   audioSource: {fileID: 0}
+  triggerButton:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 7acced97-63aa-4d09-86d8-15ce2fc8e471
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   fireSpeed: 0
-  rate: 1
   volume: 0.5
 --- !u!114 &1685664334
 MonoBehaviour:
@@ -84584,8 +84628,19 @@ MonoBehaviour:
   bulletSO: {fileID: 0}
   fireSound: {fileID: 0}
   audioSource: {fileID: 0}
+  triggerButton:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: b815c263-125d-440e-9867-4d8e336051c9
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   fireSpeed: 0
-  rate: 1
   volume: 0.5
 --- !u!4 &2018329968
 Transform:
@@ -88612,8 +88667,19 @@ MonoBehaviour:
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
   fireSound: {fileID: 0}
   audioSource: {fileID: 0}
+  triggerButton:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: e5a9e3f4-2e3a-44ae-9ad3-4fc1edf0ec92
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   fireSpeed: 0
-  rate: 1
   volume: 0.5
 --- !u!114 &2115181301
 MonoBehaviour:

@@ -98,6 +98,8 @@ MonoBehaviour:
   bullet: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
   playerStatsScriptable: {fileID: 11400000, guid: 21f263f98f36367428ee75e7287aa09a, type: 2}
   volume: 0.5
+  deathSmokePrefab: {fileID: 5597218544795505827, guid: 4aa4e682cc02e7c4b94403c600320723, type: 3}
+  damageSmokePrefab: {fileID: 3283401868584669295, guid: 61be2c1793722434088d72c9e1514c70, type: 3}
 --- !u!136 &-7171028301508566210
 CapsuleCollider:
   m_ObjectHideFlags: 0

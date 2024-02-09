@@ -56,7 +56,7 @@ public class Enemy : MonoBehaviour {
 			if(wavepointIndex >= Waypoints.points.Length) {
 				Destroy(gameObject);
 				waveSpawnerScriptable.enemiesLeft--;
-				smoke(damageSmokePrefab);
+				StartCoroutine(smoke(damageSmokePrefab));
 				playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
 				return;
 			}
@@ -68,7 +68,7 @@ public class Enemy : MonoBehaviour {
 			if(wavepointIndex >= Waypoints2.points.Length) {
 				Destroy(gameObject);
 				waveSpawnerScriptable.enemiesLeft--;
-				smoke(damageSmokePrefab);
+				StartCoroutine(smoke(damageSmokePrefab));
 				playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
 				return;
 			}
@@ -80,7 +80,7 @@ public class Enemy : MonoBehaviour {
 			if(wavepointIndex >= Waypoints3.points.Length) {
 				Destroy(gameObject);
 				waveSpawnerScriptable.enemiesLeft--;
-				smoke(damageSmokePrefab);
+				StartCoroutine(smoke(damageSmokePrefab));
 				playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
 				return;
 			}
@@ -103,6 +103,7 @@ public class Enemy : MonoBehaviour {
 	}
 	
 	IEnumerator smoke(GameObject smokeType) {
+		Debug.Log("in smoke");
 		GameObject temp = Instantiate(smokeType, gameObject.transform);
 		temp.transform.SetParent(null);
 		yield return new WaitForSeconds(3);
@@ -116,19 +117,20 @@ public class Enemy : MonoBehaviour {
             crit = bullet.CalculateCrit(bullet.critChance);
 			if (crit) {
 				health = health - (2 * bullet.bulletDamage);
-				collideFlash();
+				StartCoroutine(collideFlash());
 			} else {
             	health -= bullet.bulletDamage;
-				collideFlash();
+				StartCoroutine(collideFlash());
 			}
 			Debug.Log("Enemy health: " + health);
         }
 
         if (health <= 0) {
             Debug.Log("Enemy Dead");
+			StartCoroutine(smoke(deathSmokePrefab));
             Destroy(gameObject);
 			waveSpawnerScriptable.enemiesLeft--;
-			smoke(deathSmokePrefab);
+			
         }
 	}
 

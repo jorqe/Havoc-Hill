@@ -15,4 +15,4 @@ MonoBehaviour:
   bulletSpeed: 10
   bulletDamage: 10
   critChance: 50
-  fireRate: 1
+  fireRate: 5
