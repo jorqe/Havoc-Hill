@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour {
 		transform.Translate(speed * Time.deltaTime * dir.normalized, Space.World);
 
 		float valueRandom = Random.value;
-		float chanceNoise = 0.1f;
+		//float chanceNoise = 0.1f;
 /*
 		if (valueRandom < chanceNoise)
 		{
