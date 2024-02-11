@@ -5,6 +5,10 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - waveSpawnerScriptable: {instanceID: 0}
+  - bullet: {instanceID: 0}
+  - playerStatsScriptable: {instanceID: 0}
+  - deathSmokePrefab: {instanceID: 0}
+  - damageSmokePrefab: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

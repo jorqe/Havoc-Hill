@@ -10,7 +10,7 @@ public class SplashChangeScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        i = 5;
+        i = 20;
     }
 
     // Update is called once per frame
