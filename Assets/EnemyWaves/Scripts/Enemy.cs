@@ -19,11 +19,11 @@ public class Enemy : MonoBehaviour
 	public GameObject deathSmokePrefab;
 	public GameObject damageSmokePrefab;
 
-	Renderer ren;
+	//Renderer ren;
 
 	void Awake()
 	{
-		ren = GetComponent<Renderer>();
+		//ren = GetComponent<Renderer>();
 	}
 
 	private void Start()
@@ -102,7 +102,7 @@ public class Enemy : MonoBehaviour
 
 		wavepointIndex++;
 	}
-
+	/*
 	IEnumerator collideFlash()
 	{
 		Material m = this.ren.material;
@@ -113,7 +113,7 @@ public class Enemy : MonoBehaviour
 		yield return new WaitForSeconds(0.1f);
 		this.ren.material = m;
 		this.ren.material.color = c;
-	}
+	}*/
 
 	IEnumerator smoke(GameObject smokeType)
 	{
@@ -134,12 +134,12 @@ public class Enemy : MonoBehaviour
 			if (crit)
 			{
 				health = health - (2 * bullet.bulletDamage);
-				StartCoroutine(collideFlash());
+				//StartCoroutine(collideFlash());
 			}
 			else
 			{
 				health -= bullet.bulletDamage;
-				StartCoroutine(collideFlash());
+				//StartCoroutine(collideFlash());
 			}
 			Debug.Log("Enemy health: " + health);
 		}
