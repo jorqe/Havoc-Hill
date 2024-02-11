@@ -9,10 +9,10 @@ public class Shoot : MonoBehaviour
     public GameObject bullet;
     public Transform spawnPoint;
     public BulletScriptableObject bulletSO;
-    public AudioClip fireSound;
-    public AudioSource audioSource;
+    //public AudioClip fireSound;
+    //public AudioSource audioSource;
     public float fireSpeed;
-    public float volume = 0.5f;
+    //public float volume = 0.5f;
     private Coroutine _current;
     // Start is called before the first frame update
     void Start()
@@ -38,7 +38,7 @@ public class Shoot : MonoBehaviour
 
     public IEnumerator shootBullet(){
         fireSpeed = bulletSO.bulletSpeed;
-        audioSource.PlayOneShot(fireSound, volume);
+        //audioSource.PlayOneShot(fireSound, volume);
         GameObject spawnedBullet = Instantiate(bullet);
         spawnedBullet.transform.position = spawnPoint.position;
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
