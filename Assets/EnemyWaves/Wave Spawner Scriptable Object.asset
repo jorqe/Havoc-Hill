@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6605a69063057334886b12ecc97c0f3e, type: 3}
   m_Name: Wave Spawner Scriptable Object
   m_EditorClassIdentifier: 
-  enemiesLeft: 2
+  enemiesLeft: 0
   damage: 12
