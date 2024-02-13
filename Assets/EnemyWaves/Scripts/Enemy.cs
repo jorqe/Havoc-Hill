@@ -126,6 +126,14 @@ public class Enemy : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
+		int DHH = 0;
+		int DLH = 0;
+
+		if ( ((float) playerStatsScriptable.currentHealth / (float) playerStatsScriptable.maxHealth) > .8 )
+			DHH = bullet.DHH;
+		else if ( ((float) playerStatsScriptable.currentHealth / (float) playerStatsScriptable.maxHealth) < .2)
+			DLH = bullet.DLH;
+
 		bool crit;
 		if (other.CompareTag("Bullet"))
 		{
@@ -138,7 +146,7 @@ public class Enemy : MonoBehaviour
 			}
 			else
 			{
-				health -= bullet.bulletDamage;
+				health = health - bullet.bulletDamage - DHH - DLH;
 				//StartCoroutine(collideFlash());
 			}
 			Debug.Log("Enemy health: " + health);

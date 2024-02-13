@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.418249, g: 0.5538908, b: 0.6838328, a: 1}
+  m_IndirectSpecularColor: {r: 0.41755342, g: 0.55466294, b: 0.685885, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12589,6 +12589,18 @@ MonoBehaviour:
   bullet: {fileID: 2069901182}
   spawnPoint: {fileID: 1502883488}
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
+  triggerButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Trigger Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 33833d13-631b-4330-9507-f80d04310c84
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   fireSpeed: 0
 --- !u!114 &296583748
 MonoBehaviour:
@@ -16167,6 +16179,18 @@ MonoBehaviour:
   bullet: {fileID: 652795438935812385, guid: e4539e0602ab3784fbb057dbd391bad5, type: 3}
   spawnPoint: {fileID: 378690701}
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
+  triggerButton:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 6b8e9afe-6608-4a13-8b6b-dd97a59bad6e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   fireSpeed: 0
 --- !u!114 &375243291
 MonoBehaviour:
@@ -43298,7 +43322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wristUI: {fileID: 1728937602}
   activeWristUI: 1
-  rightRayInteractor: {fileID: 0}
+  rightRayInteractor: {fileID: 1672531859}
 --- !u!1001 &1078608438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54590,6 +54614,18 @@ MonoBehaviour:
   bullet: {fileID: 2069901182}
   spawnPoint: {fileID: 514028413}
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
+  triggerButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Trigger Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 9dfdc448-2b85-404b-8d8e-b0916cb6b6e4
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   fireSpeed: 0
 --- !u!114 &1342270327
 MonoBehaviour:
@@ -70514,6 +70550,18 @@ MonoBehaviour:
   bullet: {fileID: 652795438935812385, guid: e4539e0602ab3784fbb057dbd391bad5, type: 3}
   spawnPoint: {fileID: 812097188}
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
+  triggerButton:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 6ade9634-7640-4746-87e0-a8c1a3bf44d2
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   fireSpeed: 0
 --- !u!114 &1685664334
 MonoBehaviour:
@@ -86239,6 +86287,18 @@ MonoBehaviour:
   bullet: {fileID: 0}
   spawnPoint: {fileID: 0}
   bulletSO: {fileID: 0}
+  triggerButton:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 71676c66-e59c-4b63-bd3f-33836e2cd9a2
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   fireSpeed: 0
 --- !u!4 &2018329968
 Transform:
@@ -90263,6 +90323,18 @@ MonoBehaviour:
   bullet: {fileID: 2069901182}
   spawnPoint: {fileID: 299931875}
   bulletSO: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
+  triggerButton:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 064f1a30-f7c7-4dfd-bc13-680edde8e97d
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   fireSpeed: 0
 --- !u!114 &2115181301
 MonoBehaviour:
