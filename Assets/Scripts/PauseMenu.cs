@@ -12,9 +12,10 @@ public class NewBehaviourScript : MonoBehaviour
     public GameObject wristUI;
     public bool activeWristUI = true;
     public XRBaseInteractor rightRayInteractor;
-
     private LineRenderer lineVisual;
 
+    public PlayerStatsScriptableObject playerStatsScriptable;
+    public BulletScriptableObject BulletScriptable;
 
 
     // Start is called before the first frame update
@@ -63,6 +64,15 @@ public class NewBehaviourScript : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        playerStatsScriptable.currentHealth = 200;
+        playerStatsScriptable.maxHealth = 200;
+        BulletScriptable.bulletDamage = 10;
+        BulletScriptable.bulletSpeed = 10;
+        BulletScriptable.DHH = 0;
+        BulletScriptable.DLH = 0;
+        BulletScriptable.fireRate = 1;
+        BulletScriptable.critChance = 1;
+
     }
 
     public void ExitGame()
