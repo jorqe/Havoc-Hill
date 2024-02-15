@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.418249, g: 0.5538908, b: 0.6838328, a: 1}
+  m_IndirectSpecularColor: {r: 0.41755342, g: 0.55466294, b: 0.685885, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -39739,7 +39739,7 @@ MonoBehaviour:
   wave: 
   waveSpawnerScriptable: {fileID: 11400000, guid: 810622195c34cfc4caa9d1eb8c06cca4, type: 2}
   textBoxUpdate: {fileID: 2004392289}
-  questionInterface: {fileID: 74324392}
+  questionInterface: {fileID: 1116070866}
   button1: {fileID: 1365664868}
   button2: {fileID: 1937051909}
   button3: {fileID: 2018329966}
@@ -45733,7 +45733,7 @@ Transform:
   m_GameObject: {fileID: 1116070866}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19, y: 2.181, z: -1.668}
+  m_LocalPosition: {x: 0.601, y: 2.27, z: -1.425}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47206,7 +47206,7 @@ MonoBehaviour:
   wave: 
   waveSpawnerScriptable: {fileID: 11400000, guid: 810622195c34cfc4caa9d1eb8c06cca4, type: 2}
   textBoxUpdate: {fileID: 2004392289}
-  questionInterface: {fileID: 74324392}
+  questionInterface: {fileID: 1116070866}
   button1: {fileID: 1365664868}
   button2: {fileID: 1937051909}
   button3: {fileID: 2018329966}
@@ -57361,9 +57361,9 @@ GameObject:
   - component: {fileID: 1364856864}
   - component: {fileID: 1364856867}
   - component: {fileID: 1364856866}
-  - component: {fileID: 1364856865}
+  - component: {fileID: 1364856868}
   m_Layer: 0
-  m_Name: UpgBtn2
+  m_Name: False
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57384,45 +57384,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 406632379}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1364856865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364856863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd103a85babaa94b8951d743d4b0f01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button: {fileID: 1392735784}
-  button1: {fileID: 0}
-  button2: {fileID: 406632378}
-  button3: {fileID: 0}
-  upgradeGUI: {fileID: 1116070866}
-  UpgDesc1: {fileID: 193531976}
-  UpgDesc2: {fileID: 0}
-  UpgDesc3: {fileID: 0}
-  upgradesScript: {fileID: 0}
-  onPress:
-    m_PersistentCalls:
-      m_Calls: []
-  onRelease:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 406632380}
-        m_TargetAssemblyTypeName: SpeedUPG, Assembly-CSharp
-        m_MethodName: SpdUpg
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!54 &1364856866
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -57471,6 +57432,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8736296, y: 2, z: 0.8471772}
   m_Center: {x: 0.0014693011, y: 0, z: 0.005877763}
+--- !u!114 &1364856868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364856863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17bc8ab0244d47442a9761839eaaabe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  press: {fileID: 1392735784}
+  questionInterface: {fileID: 1116070866}
+  textBoxUpdate: {fileID: 2004392289}
 --- !u!1 &1365135083
 GameObject:
   m_ObjectHideFlags: 0
@@ -67965,9 +67941,9 @@ GameObject:
   - component: {fileID: 1623741605}
   - component: {fileID: 1623741608}
   - component: {fileID: 1623741607}
-  - component: {fileID: 1623741606}
+  - component: {fileID: 1623741609}
   m_Layer: 0
-  m_Name: UpgBtn2
+  m_Name: True
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67988,45 +67964,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1995951054}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1623741606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1623741604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd103a85babaa94b8951d743d4b0f01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button: {fileID: 702078517}
-  button1: {fileID: 0}
-  button2: {fileID: 1995951053}
-  button3: {fileID: 0}
-  upgradeGUI: {fileID: 1116070866}
-  UpgDesc1: {fileID: 193531976}
-  UpgDesc2: {fileID: 0}
-  UpgDesc3: {fileID: 0}
-  upgradesScript: {fileID: 0}
-  onPress:
-    m_PersistentCalls:
-      m_Calls: []
-  onRelease:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1995951055}
-        m_TargetAssemblyTypeName: SpeedUPG, Assembly-CSharp
-        m_MethodName: SpdUpg
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!54 &1623741607
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -68075,6 +68012,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8736296, y: 2, z: 0.8471772}
   m_Center: {x: 0.0014693011, y: 0, z: 0.005877763}
+--- !u!114 &1623741609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623741604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17bc8ab0244d47442a9761839eaaabe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  press: {fileID: 702078517}
+  questionInterface: {fileID: 1116070866}
+  textBoxUpdate: {fileID: 2004392289}
 --- !u!1 &1625038566
 GameObject:
   m_ObjectHideFlags: 0
@@ -74171,7 +74123,7 @@ MonoBehaviour:
   wave: 
   waveSpawnerScriptable: {fileID: 11400000, guid: 810622195c34cfc4caa9d1eb8c06cca4, type: 2}
   textBoxUpdate: {fileID: 2004392289}
-  questionInterface: {fileID: 74324392}
+  questionInterface: {fileID: 1116070866}
   button1: {fileID: 1365664868}
   button2: {fileID: 1937051909}
   button3: {fileID: 2018329966}
@@ -86619,7 +86571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76f4ce51437ea94295123459bdef2ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: {fileID: 902159148}
+  displayText: {fileID: 193531976}
   lessonFile: {fileID: 4900000, guid: 20e28a875d887c444b23aa1750e3c588, type: 3}
 --- !u!4 &2004392290
 Transform:
