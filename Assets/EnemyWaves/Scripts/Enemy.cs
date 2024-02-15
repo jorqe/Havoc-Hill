@@ -119,7 +119,7 @@ public class Enemy : MonoBehaviour
 	{
 		Debug.Log("in smoke");
 		GameObject temp = Instantiate(smokeType, gameObject.transform);
-		temp.transform.position = new Vector3(temp.transform.position.x, temp.transform.position.y - 4, temp.transform.position.z);
+		temp.transform.position = new Vector3(temp.transform.position.x, temp.transform.position.y - 3f, temp.transform.position.z);
 		temp.transform.SetParent(null);
 		yield return new WaitForSeconds(3);
 		Destroy(temp);
