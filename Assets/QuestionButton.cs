@@ -7,6 +7,7 @@ public class QuestionButton : MonoBehaviour
     public GameObject press;
     public GameObject questionInterface;
     public TextBoxUpdate textBoxUpdate;
+    public string current_answer;
     bool isPressed;
     GameObject presser;
     // Start is called before the first frame update
@@ -38,10 +39,14 @@ public class QuestionButton : MonoBehaviour
             Debug.Log("in questionbutton answer = " + textBoxUpdate.getAnswer());
             if (gameObject.name == textBoxUpdate.getAnswer()){
                 Debug.Log("Correct");
+                current_answer = "true";
+
             }
             else{
                 Debug.Log("Incorrect");
+                current_answer = "false";
             }
+            textBoxUpdate.setInput(current_answer);
             isPressed = false;
             questionInterface.SetActive(false);
         }
