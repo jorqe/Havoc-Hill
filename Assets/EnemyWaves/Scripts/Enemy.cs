@@ -19,13 +19,6 @@ public class Enemy : MonoBehaviour
 	public GameObject deathSmokePrefab;
 	public GameObject damageSmokePrefab;
 
-	//Renderer ren;
-
-	void Awake()
-	{
-		//ren = GetComponent<Renderer>();
-	}
-
 	private void Start()
 	{
 		if (waypointsNum == 1)
@@ -102,18 +95,28 @@ public class Enemy : MonoBehaviour
 
 		wavepointIndex++;
 	}
-	/*
+
 	IEnumerator collideFlash()
 	{
-		Material m = this.ren.material;
-		Color32 c = this.ren.material.color;
+		// Material m = this.ren.material;
+		// Color32 c = this.ren.material.color;
 
-		this.ren.material = null;
-		this.ren.material.color = Color.white;
+		// this.ren.material = null;
+		// this.ren.material.color = Color.white;
+		// yield return new WaitForSeconds(0.1f);
+		// this.ren.material = m;
+		// this.ren.material.color = c;
+
+		SkinnedMeshRenderer renderer = GetComponentInChildren<SkinnedMeshRenderer>();
+		Material[] mats = renderer.materials;
+		Material default_material = mats[0];
+		Material flash_material = mats[1];
+		mats[0] = flash_material;
+		renderer.materials = mats;
 		yield return new WaitForSeconds(0.1f);
-		this.ren.material = m;
-		this.ren.material.color = c;
-	}*/
+		mats[0] = default_material;
+		renderer.materials = mats;
+	}
 
 	IEnumerator smoke(GameObject smokeType)
 	{
@@ -143,12 +146,12 @@ public class Enemy : MonoBehaviour
 			if (crit)
 			{
 				health = health - (2 * bullet.bulletDamage);
-				//StartCoroutine(collideFlash());
+				// StartCoroutine(collideFlash());
 			}
 			else
 			{
 				health = health - bullet.bulletDamage - DHH - DLH;
-				//StartCoroutine(collideFlash());
+				// StartCoroutine(collideFlash());
 			}
 			Debug.Log("Enemy health: " + health);
 		}
