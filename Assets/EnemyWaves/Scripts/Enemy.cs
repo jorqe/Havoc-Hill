@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
 	//public AudioSource audioSource;
 	public GameObject deathSmokePrefab;
 	public GameObject damageSmokePrefab;
+	public Material flash_material;
 
 	private void Start()
 	{
@@ -30,8 +31,7 @@ public class Enemy : MonoBehaviour
 		waveSpawner = GetComponentInParent<WaveSpawner>();
 	}
 
-	void Update()
-	{
+	void Update() {
 		Vector3 dir = target.position - transform.position;
 		transform.Translate(speed * Time.deltaTime * dir.normalized, Space.World);
 
@@ -98,19 +98,10 @@ public class Enemy : MonoBehaviour
 
 	IEnumerator collideFlash()
 	{
-		// Material m = this.ren.material;
-		// Color32 c = this.ren.material.color;
-
-		// this.ren.material = null;
-		// this.ren.material.color = Color.white;
-		// yield return new WaitForSeconds(0.1f);
-		// this.ren.material = m;
-		// this.ren.material.color = c;
-
 		SkinnedMeshRenderer renderer = GetComponentInChildren<SkinnedMeshRenderer>();
 		Material[] mats = renderer.materials;
 		Material default_material = mats[0];
-		Material flash_material = mats[1];
+		//Material flash_material = mats[1];
 		mats[0] = flash_material;
 		renderer.materials = mats;
 		yield return new WaitForSeconds(0.1f);
@@ -146,12 +137,12 @@ public class Enemy : MonoBehaviour
 			if (crit)
 			{
 				health = health - (2 * bullet.bulletDamage);
-				// StartCoroutine(collideFlash());
+				StartCoroutine(collideFlash());
 			}
 			else
 			{
 				health = health - bullet.bulletDamage - DHH - DLH;
-				// StartCoroutine(collideFlash());
+				StartCoroutine(collideFlash());
 			}
 			Debug.Log("Enemy health: " + health);
 		}

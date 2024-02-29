@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 514471462265150744, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 514471462265150744, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -104,6 +104,7 @@ MonoBehaviour:
   volume: 0.5
   deathSmokePrefab: {fileID: 3283401868584669295, guid: d26279faeedcfba4c88e9a354e28293f, type: 3}
   damageSmokePrefab: {fileID: 3283401868584669295, guid: 5423072da79b1c14694026d3f1f06d7d, type: 3}
+  flash_material: {fileID: 2100000, guid: 8b5c0a0bb6ed8dc48bc306a6912f24c5, type: 2}
 --- !u!136 &5269647074024882183
 CapsuleCollider:
   m_ObjectHideFlags: 0
