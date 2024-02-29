@@ -24,6 +24,8 @@ public class WaveSpawner : MonoBehaviour {
 	public bool answered = false;
 	public bool flag2 = true;
 	public bool flag3 = true;
+	public string current_answer;
+
 
 	void Start() {
 		waveSpawnerScriptable.enemiesLeft = 0;
@@ -103,10 +105,12 @@ public class WaveSpawner : MonoBehaviour {
 		if(flag2){
 			questionInterface.SetActive(true);
 			textBoxUpdate.DisplayRandomTrivia();
-			flag2 = false;
+            current_answer = textBoxUpdate.getAnswer();
+            Debug.Log("Current Answer = " + current_answer);
+            flag2 = false;
 		}
 		yield return new WaitUntil(() => !questionInterface.activeSelf);
-		answered = true;
+        answered = true;
 		flag2 = true;
 	}
 
@@ -117,6 +121,9 @@ public class WaveSpawner : MonoBehaviour {
 		}
 		yield return new WaitUntil(() => answered);
 		answered = false;
-		StartCoroutine(chooseUpg());
+		if (textBoxUpdate.getInput() == "true")
+		{
+            StartCoroutine(chooseUpg());
+        }
 	}
 }
