@@ -44,6 +44,7 @@ public class QuestionButton : MonoBehaviour
             Debug.Log("comparison of " + buttonName + " and " + textBoxUpdate.getAnswer() + " is " + (buttonName.Equals(textBoxUpdate.getAnswer(), StringComparison.Ordinal)));
             Debug.Log("buttonName is " + buttonName);
             Debug.Log("in questionbutton answer = " + textBoxUpdate.getAnswer());
+
             if (buttonName == textBoxUpdate.getAnswer()){
                 Debug.Log("Correct");
                 triviaInputScriptable.givenAnswer = "Correct";
