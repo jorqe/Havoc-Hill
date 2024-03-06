@@ -13,11 +13,12 @@ public class Enemy : MonoBehaviour
 	public WaveSpawnerScriptableObject waveSpawnerScriptable;
 	public BulletScriptableObject bullet;
 	public PlayerStatsScriptableObject playerStatsScriptable;
+	//public SoundEffectPlayer SFXPlayer;
 	//public AudioClip enemySound;
 	public float volume = 0.5f;
-	//public AudioSource audioSource;
 	public GameObject deathSmokePrefab;
 	public GameObject damageSmokePrefab;
+	public AudioSource idleSound;
 	public Material flash_material;
 
 	private void Start()
@@ -34,14 +35,13 @@ public class Enemy : MonoBehaviour
 	void Update() {
 		Vector3 dir = target.position - transform.position;
 		transform.Translate(speed * Time.deltaTime * dir.normalized, Space.World);
-
-		float valueRandom = Random.value;
-		//float chanceNoise = 0.1f;
 		/*
-				if (valueRandom < chanceNoise)
-				{
-					audioSource.PlayOneShot(enemySound, volume);
-				}
+		float valueRandom = Random.value;
+		float chanceNoise = 0.1f;
+		if (valueRandom < chanceNoise)
+		{
+			SFXPlayer.PlaySound();
+		}
 		*/
 		if (Vector3.Distance(transform.position, target.position) <= 0.2f)
 		{

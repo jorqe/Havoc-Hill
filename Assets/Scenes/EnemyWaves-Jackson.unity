@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.418249, g: 0.5538908, b: 0.6838328, a: 1}
+  m_IndirectSpecularColor: {r: 0.41763794, g: 0.55508715, b: 0.68560433, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -39150,6 +39150,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 951245483}
+  - component: {fileID: 951245484}
+  - component: {fileID: 951245485}
   m_Layer: 0
   m_Name: Waves
   m_TagString: Untagged
@@ -39175,6 +39177,115 @@ Transform:
   - {fileID: 609853568}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &951245484
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951245482}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4578c0e035725834f84aa7a71d5769ab, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &951245485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951245482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 464cb9c1b977e2f4885df3f0c674bf4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveSpawnerScriptable: {fileID: 11400000, guid: 810622195c34cfc4caa9d1eb8c06cca4, type: 2}
 --- !u!1001 &952463701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39748,6 +39859,7 @@ MonoBehaviour:
   answered: 0
   flag2: 1
   flag3: 1
+  current_answer: 
 --- !u!1001 &975136390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47215,6 +47327,7 @@ MonoBehaviour:
   answered: 0
   flag2: 1
   flag3: 1
+  current_answer: 
 --- !u!4 &1147008088
 Transform:
   m_ObjectHideFlags: 0
@@ -57447,6 +57560,7 @@ MonoBehaviour:
   press: {fileID: 1392735784}
   questionInterface: {fileID: 1116070866}
   textBoxUpdate: {fileID: 2004392289}
+  current_answer: 
 --- !u!1 &1365135083
 GameObject:
   m_ObjectHideFlags: 0
@@ -68027,6 +68141,7 @@ MonoBehaviour:
   press: {fileID: 702078517}
   questionInterface: {fileID: 1116070866}
   textBoxUpdate: {fileID: 2004392289}
+  current_answer: 
 --- !u!1 &1625038566
 GameObject:
   m_ObjectHideFlags: 0
@@ -74132,6 +74247,7 @@ MonoBehaviour:
   answered: 0
   flag2: 1
   flag3: 1
+  current_answer: 
 --- !u!1001 &1719742653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86573,6 +86689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: {fileID: 193531976}
   lessonFile: {fileID: 4900000, guid: 20e28a875d887c444b23aa1750e3c588, type: 3}
+  input: 
 --- !u!4 &2004392290
 Transform:
   m_ObjectHideFlags: 0

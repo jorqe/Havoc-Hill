@@ -10,7 +10,6 @@ public class TextBoxUpdate : MonoBehaviour
     string[] lines;
     int answer;
     public TextAsset lessonFile;
-    public string input;
 
     // Start is called before the first frame update
     void Start()
@@ -53,25 +52,5 @@ public class TextBoxUpdate : MonoBehaviour
     public string getAnswer()
     {
         return lines[answer];
-    }
-
-    public string setInput(string given)
-    {
-        if (given == "true")
-        {
-            input = "true";
-        }
-
-        if (given == "false")
-        {
-            input = "false";
-        }
-        return input;
-    }
-
-    public string getInput()
-    {
-        return input;
-
     }
 }

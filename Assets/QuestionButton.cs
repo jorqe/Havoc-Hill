@@ -8,6 +8,7 @@ public class QuestionButton : MonoBehaviour
     public GameObject press;
     public GameObject questionInterface;
     public TextBoxUpdate textBoxUpdate;
+    public TriviaInputScriptableObject triviaInputScriptable;
     public string current_answer;
     bool isPressed;
     GameObject presser;
@@ -45,14 +46,13 @@ public class QuestionButton : MonoBehaviour
             Debug.Log("in questionbutton answer = " + textBoxUpdate.getAnswer());
             if (buttonName == textBoxUpdate.getAnswer()){
                 Debug.Log("Correct");
-                current_answer = "true";
+                triviaInputScriptable.givenAnswer = "Correct";
 
             }
             else{
                 Debug.Log("Incorrect");
-                current_answer = "false";
+                triviaInputScriptable.givenAnswer = "Incorrect";
             }
-            textBoxUpdate.setInput(current_answer);
             isPressed = false;
             questionInterface.SetActive(false);
         }

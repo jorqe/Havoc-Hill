@@ -14,6 +14,7 @@ public class WaveSpawner : MonoBehaviour {
 	[SerializeField] private List<int> wave = new();
 	private bool readyToCountDown = false;
 	public WaveSpawnerScriptableObject waveSpawnerScriptable;
+	public TriviaInputScriptableObject triviaInputScriptable;
 	public TextBoxUpdate textBoxUpdate;
 	public GameObject questionInterface;
 	public GameObject button1;
@@ -121,9 +122,9 @@ public class WaveSpawner : MonoBehaviour {
 		}
 		yield return new WaitUntil(() => answered);
 		answered = false;
-		if (textBoxUpdate.getInput() == "true")
-		{
+		if (triviaInputScriptable.givenAnswer == "Correct"){
             StartCoroutine(chooseUpg());
         }
+
 	}
 }
