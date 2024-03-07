@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
 	public WaveSpawnerScriptableObject waveSpawnerScriptable;
 	public BulletScriptableObject bullet;
 	public PlayerStatsScriptableObject playerStatsScriptable;
+	public TriviaInputScriptableObject triviaInputScriptable;
 	//public SoundEffectPlayer SFXPlayer;
 	//public AudioClip enemySound;
 	public float volume = 0.5f;
@@ -73,7 +74,7 @@ public class Enemy : MonoBehaviour
 				waveSpawnerScriptable.enemiesLeft--;
 				StartCoroutine(smoke(damageSmokePrefab));
 				playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
-				return;
+                return;
 			}
 			target = Waypoints2.points[wavepointIndex];
 			transform.LookAt(target);

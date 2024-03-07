@@ -62,8 +62,9 @@ public class WaveSpawner : MonoBehaviour {
 
 	IEnumerator SpawnWave() {
 		Debug.Log("inside spawn wave");
+        triviaInputScriptable.givenAnswer = "Testing";
 
-		CreateWave();
+        CreateWave();
 
 		waveSpawnerScriptable.enemiesLeft += wave.Count;
 

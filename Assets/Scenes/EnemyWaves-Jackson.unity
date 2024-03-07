@@ -39849,6 +39849,7 @@ MonoBehaviour:
   countdown: 2
   wave: 
   waveSpawnerScriptable: {fileID: 11400000, guid: 810622195c34cfc4caa9d1eb8c06cca4, type: 2}
+  triviaInputScriptable: {fileID: 11400000, guid: 3ec2c0bd91ac7b34ea478658b589b60d, type: 2}
   textBoxUpdate: {fileID: 2004392289}
   questionInterface: {fileID: 1116070866}
   button1: {fileID: 1365664868}
@@ -47317,6 +47318,7 @@ MonoBehaviour:
   countdown: 2
   wave: 
   waveSpawnerScriptable: {fileID: 11400000, guid: 810622195c34cfc4caa9d1eb8c06cca4, type: 2}
+  triviaInputScriptable: {fileID: 11400000, guid: 3ec2c0bd91ac7b34ea478658b589b60d, type: 2}
   textBoxUpdate: {fileID: 2004392289}
   questionInterface: {fileID: 1116070866}
   button1: {fileID: 1365664868}
@@ -57560,6 +57562,7 @@ MonoBehaviour:
   press: {fileID: 1392735784}
   questionInterface: {fileID: 1116070866}
   textBoxUpdate: {fileID: 2004392289}
+  triviaInputScriptable: {fileID: 0}
   current_answer: 
 --- !u!1 &1365135083
 GameObject:
@@ -68141,6 +68144,7 @@ MonoBehaviour:
   press: {fileID: 702078517}
   questionInterface: {fileID: 1116070866}
   textBoxUpdate: {fileID: 2004392289}
+  triviaInputScriptable: {fileID: 0}
   current_answer: 
 --- !u!1 &1625038566
 GameObject:
@@ -74237,6 +74241,7 @@ MonoBehaviour:
   countdown: 2
   wave: 
   waveSpawnerScriptable: {fileID: 11400000, guid: 810622195c34cfc4caa9d1eb8c06cca4, type: 2}
+  triviaInputScriptable: {fileID: 11400000, guid: 3ec2c0bd91ac7b34ea478658b589b60d, type: 2}
   textBoxUpdate: {fileID: 2004392289}
   questionInterface: {fileID: 1116070866}
   button1: {fileID: 1365664868}
@@ -86689,7 +86694,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: {fileID: 193531976}
   lessonFile: {fileID: 4900000, guid: 20e28a875d887c444b23aa1750e3c588, type: 3}
-  input: 
 --- !u!4 &2004392290
 Transform:
   m_ObjectHideFlags: 0
