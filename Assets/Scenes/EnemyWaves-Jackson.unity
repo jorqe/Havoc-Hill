@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.41763794, g: 0.55508715, b: 0.68560433, a: 1}
+  m_IndirectSpecularColor: {r: 0.41755342, g: 0.55466294, b: 0.685885, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -57562,7 +57562,7 @@ MonoBehaviour:
   press: {fileID: 1392735784}
   questionInterface: {fileID: 1116070866}
   textBoxUpdate: {fileID: 2004392289}
-  triviaInputScriptable: {fileID: 0}
+  triviaInputScriptable: {fileID: 11400000, guid: 3ec2c0bd91ac7b34ea478658b589b60d, type: 2}
   current_answer: 
 --- !u!1 &1365135083
 GameObject:
@@ -68144,7 +68144,7 @@ MonoBehaviour:
   press: {fileID: 702078517}
   questionInterface: {fileID: 1116070866}
   textBoxUpdate: {fileID: 2004392289}
-  triviaInputScriptable: {fileID: 0}
+  triviaInputScriptable: {fileID: 11400000, guid: 3ec2c0bd91ac7b34ea478658b589b60d, type: 2}
   current_answer: 
 --- !u!1 &1625038566
 GameObject:

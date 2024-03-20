@@ -126,6 +126,10 @@ public class WaveSpawner : MonoBehaviour {
 		if (triviaInputScriptable.givenAnswer == "Correct"){
             StartCoroutine(chooseUpg());
         }
+		else{
+			flag = false;
+			flag3 = true;
+		}
 
 	}
 }

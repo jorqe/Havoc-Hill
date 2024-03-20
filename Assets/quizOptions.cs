@@ -23,4 +23,9 @@ public class quizOptions : MonoBehaviour
     {
         
     }
+
+    void OnDisable(){
+        Debug.Log("quiz chosen is " + dropdown.options[dropdown.value].text);
+        PlayerPrefs.SetString("quiz", dropdown.options[dropdown.value].text);
+    }
 }
