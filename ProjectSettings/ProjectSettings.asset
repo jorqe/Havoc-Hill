@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: SrCapStone
-  productName: HavocHillCSsp32Beta
+  productName: HavocHillCSsp33Beta
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -140,11 +140,7 @@ PlayerSettings:
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
   bundleVersion: 0.2
-  preloadedAssets:
-  - {fileID: -2510071106904090610, guid: 5f24cdc9392cdcf4d887bd7d5b0751ff, type: 2}
-  - {fileID: 11400000, guid: 356b2e81e39366a4080d09b3f2922774, type: 2}
-  - {fileID: 11400000, guid: 9b530b7462dccf546b8e0b956b192bd3, type: 2}
-  - {fileID: -6396818709424232157, guid: ef84e3033c00fb3439879a4c2f9d5742, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.41755342, g: 0.55466294, b: 0.685885, a: 1}
+  m_IndirectSpecularColor: {r: 0.4182492, g: 0.5539532, b: 0.6838386, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10152,6 +10152,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1576488453971394810, guid: a778b631c6253a04899cb31bad047c81, type: 3}
   m_PrefabInstance: {fileID: 218537464}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &219130977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 219130978}
+  - component: {fileID: 219130979}
+  m_Layer: 0
+  m_Name: Reader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &219130978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219130977}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 584614840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &219130979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219130977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50256be3b50274642bafecda5863d4ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JSONText: {fileID: 4900000, guid: 3c14ce8831eb00e42981f70d1a6270f9, type: 3}
+  BulletScriptable: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
+  playerStatsScriptable: {fileID: 11400000, guid: 21f263f98f36367428ee75e7287aa09a, type: 2}
+  myStatsList:
+    stats: []
 --- !u!1 &221515110
 GameObject:
   m_ObjectHideFlags: 0
@@ -25035,6 +25084,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584097028}
   m_Mesh: {fileID: 9216849287856227091, guid: 6940fd40d4e0300479ab2c3c4e65c5c2, type: 3}
+--- !u!1 &584614839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 584614840}
+  m_Layer: 0
+  m_Name: SaveSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &584614840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584614839}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.2276442, y: 2.1931312, z: -1.7811362}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 219130978}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &586078386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39150,8 +39231,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 951245483}
-  - component: {fileID: 951245484}
-  - component: {fileID: 951245485}
   m_Layer: 0
   m_Name: Waves
   m_TagString: Untagged
@@ -39177,115 +39256,6 @@ Transform:
   - {fileID: 609853568}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &951245484
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951245482}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4578c0e035725834f84aa7a71d5769ab, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &951245485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951245482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464cb9c1b977e2f4885df3f0c674bf4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waveSpawnerScriptable: {fileID: 11400000, guid: 810622195c34cfc4caa9d1eb8c06cca4, type: 2}
 --- !u!1001 &952463701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39849,7 +39819,7 @@ MonoBehaviour:
   countdown: 2
   wave: 
   waveSpawnerScriptable: {fileID: 11400000, guid: 810622195c34cfc4caa9d1eb8c06cca4, type: 2}
-  triviaInputScriptable: {fileID: 11400000, guid: 3ec2c0bd91ac7b34ea478658b589b60d, type: 2}
+  triviaInputScriptable: {fileID: 0}
   textBoxUpdate: {fileID: 2004392289}
   questionInterface: {fileID: 1116070866}
   button1: {fileID: 1365664868}
@@ -47318,7 +47288,7 @@ MonoBehaviour:
   countdown: 2
   wave: 
   waveSpawnerScriptable: {fileID: 11400000, guid: 810622195c34cfc4caa9d1eb8c06cca4, type: 2}
-  triviaInputScriptable: {fileID: 11400000, guid: 3ec2c0bd91ac7b34ea478658b589b60d, type: 2}
+  triviaInputScriptable: {fileID: 0}
   textBoxUpdate: {fileID: 2004392289}
   questionInterface: {fileID: 1116070866}
   button1: {fileID: 1365664868}
@@ -57562,7 +57532,7 @@ MonoBehaviour:
   press: {fileID: 1392735784}
   questionInterface: {fileID: 1116070866}
   textBoxUpdate: {fileID: 2004392289}
-  triviaInputScriptable: {fileID: 11400000, guid: 3ec2c0bd91ac7b34ea478658b589b60d, type: 2}
+  triviaInputScriptable: {fileID: 0}
   current_answer: 
 --- !u!1 &1365135083
 GameObject:
@@ -68144,7 +68114,7 @@ MonoBehaviour:
   press: {fileID: 702078517}
   questionInterface: {fileID: 1116070866}
   textBoxUpdate: {fileID: 2004392289}
-  triviaInputScriptable: {fileID: 11400000, guid: 3ec2c0bd91ac7b34ea478658b589b60d, type: 2}
+  triviaInputScriptable: {fileID: 0}
   current_answer: 
 --- !u!1 &1625038566
 GameObject:
@@ -74241,7 +74211,7 @@ MonoBehaviour:
   countdown: 2
   wave: 
   waveSpawnerScriptable: {fileID: 11400000, guid: 810622195c34cfc4caa9d1eb8c06cca4, type: 2}
-  triviaInputScriptable: {fileID: 11400000, guid: 3ec2c0bd91ac7b34ea478658b589b60d, type: 2}
+  triviaInputScriptable: {fileID: 0}
   textBoxUpdate: {fileID: 2004392289}
   questionInterface: {fileID: 1116070866}
   button1: {fileID: 1365664868}
@@ -93964,3 +93934,4 @@ SceneRoots:
   - {fileID: 74324393}
   - {fileID: 1116070867}
   - {fileID: 951245483}
+  - {fileID: 584614840}

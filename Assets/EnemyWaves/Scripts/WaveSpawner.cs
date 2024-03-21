@@ -33,7 +33,7 @@ public class WaveSpawner : MonoBehaviour {
 	}
 
 	void Update() {
-		Debug.Log("Enemies left = " + waveSpawnerScriptable.enemiesLeft);
+		//Debug.Log("Enemies left = " + waveSpawnerScriptable.enemiesLeft);
 
 		if (readyToCountDown == true) {
 			countdown -= Time.deltaTime;
@@ -54,14 +54,14 @@ public class WaveSpawner : MonoBehaviour {
 				StartCoroutine(endOfWave());
 			}
 			else{
-				Debug.Log("before readyToCountDown gets set to true");
+				//Debug.Log("before readyToCountDown gets set to true");
 				readyToCountDown = true;
 			}
 		}
 	}
 
 	IEnumerator SpawnWave() {
-		Debug.Log("inside spawn wave");
+		//Debug.Log("inside spawn wave");
         triviaInputScriptable.givenAnswer = "Testing";
 
         CreateWave();
