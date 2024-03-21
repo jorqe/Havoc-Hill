@@ -45759,6 +45759,7 @@ GameObject:
   - component: {fileID: 1889091176}
   - component: {fileID: 1889091175}
   - component: {fileID: 1889091174}
+  - component: {fileID: 1889091177}
   m_Layer: 0
   m_Name: WeaponHold
   m_TagString: Untagged
@@ -45840,7 +45841,7 @@ MonoBehaviour:
     m_Options:
     - m_Text: WeaponSettings
       m_Image: {fileID: 0}
-    - m_Text: Toggle
+    - m_Text: Sticky
       m_Image: {fileID: 0}
     - m_Text: Hold
       m_Image: {fileID: 0}
@@ -45886,6 +45887,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889091172}
   m_CullTransparentMesh: 1
+--- !u!114 &1889091177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889091172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f27cd3f69d56649a5891a41c36ecdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 1889091174}
 --- !u!1 &1916138221
 GameObject:
   m_ObjectHideFlags: 0

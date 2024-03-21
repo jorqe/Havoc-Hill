@@ -43592,6 +43592,7 @@ GameObject:
   - component: {fileID: 1077547281}
   - component: {fileID: 1077547280}
   - component: {fileID: 1077547282}
+  - component: {fileID: 1077547283}
   m_Layer: 0
   m_Name: Left Controller
   m_TagString: Untagged
@@ -44234,7 +44235,19 @@ MonoBehaviour:
   rightRayInteractor: {fileID: 1672531859}
   playerStatsScriptable: {fileID: 11400000, guid: 21f263f98f36367428ee75e7287aa09a, type: 2}
   BulletScriptable: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
-  saver: {fileID: 1119498484}
+--- !u!114 &1077547283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077547273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 682c3caedc6a72a4eb5280488c4b6c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directInteractor: {fileID: 1077547281}
 --- !u!1001 &1078608438
 PrefabInstance:
   m_ObjectHideFlags: 0
