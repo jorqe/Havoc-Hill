@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class WaveSpawner : MonoBehaviour {
 	public Transform enemyPrefab1;
@@ -72,9 +73,13 @@ public class WaveSpawner : MonoBehaviour {
 
 		waveSpawnerScriptable.waveNum++;
 
-		if (waveSpawnerScriptable.waveNum % 1 == 0) {
-			Instantiate(bossPrefab, spawnPoint.position, spawnPoint.rotation);
-			waveSpawnerScriptable.bossLeft = true;
+		try {
+			if (waveSpawnerScriptable.waveNum % 1 == 0) {
+				Instantiate(bossPrefab, spawnPoint.position, spawnPoint.rotation);
+				waveSpawnerScriptable.bossLeft = true;
+			}
+		} catch (Exception e) {
+			Debug.Log("No Boss on this spawner");
 		}
 
 		for(int i = 0; i < wave.Count; i++) {
@@ -95,7 +100,7 @@ public class WaveSpawner : MonoBehaviour {
 		int enemyType;
 		int waveDif = 0;
 		for (int i = 0; waveDif < waveSpawnerScriptable.difficulty; i++) {
-			enemyType = Random.Range(1, 4);
+			enemyType = UnityEngine.Random.Range(1, 4);
 			wave.Add(enemyType);
 			waveDif += enemyType;
 		}

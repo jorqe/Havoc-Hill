@@ -6,7 +6,6 @@ public class BossEnemy : MonoBehaviour
 
 	[SerializeField] private float speed;
 	[SerializeField] private float health;
-	[SerializeField] private int waypointsNum;
 	private Transform target;
 	private int wavepointIndex = 0;
 	private WaveSpawner waveSpawner;
@@ -21,16 +20,14 @@ public class BossEnemy : MonoBehaviour
 	public GameObject damageSmokePrefab;
 	public AudioSource idleSound;
 	public Material flash_material;
+	Animator animator;
+	private bool readyToAttack = true;
 
 	private void Start()
 	{
-		if (waypointsNum == 1)
-			target = Waypoints.points[0];
-		else if (waypointsNum == 2)
-			target = Waypoints2.points[0];
-		else if (waypointsNum == 3)
-			target = Waypoints3.points[0];
+		target = Waypoints.points[0];
 		waveSpawner = GetComponentInParent<WaveSpawner>();
+		animator = GetComponent<Animator>();
 	}
 
 	void Update() {
@@ -50,74 +47,21 @@ public class BossEnemy : MonoBehaviour
 		}
 	}
 
-	IEnumerator GetNextWaypoint()
-	{
-		if (waypointsNum == 1)
-		{
-			if (wavepointIndex >= Waypoints.points.Length)
-			{
-				// Destroy(gameObject);
-				// waveSpawnerScriptable.enemiesLeft--;
-				// StartCoroutine(smoke(damageSmokePrefab));
-				while(health > 0) {
-					GetComponent<Animation>().Play("Attack01");
-					playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
-					yield return new WaitForSeconds(3f);
-				}
-				GetComponent<Animation>().Play("Die");
-				waveSpawnerScriptable.bossLeft = false;
-				yield return new WaitForSeconds(3f);
-				StartCoroutine(smoke(deathSmokePrefab));
-				Destroy(gameObject);
+	IEnumerator GetNextWaypoint() {
+		if (wavepointIndex >= Waypoints.points.Length) {
+			animator.SetTrigger("Attack");
+			while (health > 0 && readyToAttack == true) {
+				playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
+				StartCoroutine(smoke(damageSmokePrefab));
+				Debug.Log("Boss Attacks");
+				readyToAttack = false;
+				yield return new WaitForSeconds(1);
+				readyToAttack = true;
 			}
+		} else {
 			target = Waypoints.points[wavepointIndex];
 			transform.LookAt(target);
 		}
-
-		if (waypointsNum == 2)
-		{
-			if (wavepointIndex >= Waypoints.points.Length)
-			{
-				// Destroy(gameObject);
-				// waveSpawnerScriptable.enemiesLeft--;
-				// StartCoroutine(smoke(damageSmokePrefab));
-				while(health > 0) {
-					GetComponent<Animation>().Play("Attack01");
-					playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
-					yield return new WaitForSeconds(3f);
-				}
-				GetComponent<Animation>().Play("Die");
-				waveSpawnerScriptable.bossLeft = false;
-				yield return new WaitForSeconds(3f);
-				StartCoroutine(smoke(deathSmokePrefab));
-				Destroy(gameObject);
-			}
-			target = Waypoints2.points[wavepointIndex];
-			transform.LookAt(target);
-		}
-
-		if (waypointsNum == 3)
-		{
-			if (wavepointIndex >= Waypoints.points.Length)
-			{
-				// Destroy(gameObject);
-				// waveSpawnerScriptable.enemiesLeft--;
-				// StartCoroutine(smoke(damageSmokePrefab));
-				while(health > 0) {
-					GetComponent<Animation>().Play("Attack01");
-					playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
-					yield return new WaitForSeconds(3f);
-				}
-				GetComponent<Animation>().Play("Die");
-				waveSpawnerScriptable.bossLeft = false;
-				yield return new WaitForSeconds(3f);
-				StartCoroutine(smoke(deathSmokePrefab));
-				Destroy(gameObject);
-			}
-			target = Waypoints3.points[wavepointIndex];
-			transform.LookAt(target);
-		}
-
 		wavepointIndex++;
 	}
 
@@ -126,7 +70,6 @@ public class BossEnemy : MonoBehaviour
 		SkinnedMeshRenderer renderer = GetComponentInChildren<SkinnedMeshRenderer>();
 		Material[] mats = renderer.materials;
 		Material default_material = mats[0];
-		//Material flash_material = mats[1];
 		mats[0] = flash_material;
 		renderer.materials = mats;
 		yield return new WaitForSeconds(0.1f);
@@ -176,9 +119,8 @@ public class BossEnemy : MonoBehaviour
 		{
 			Debug.Log("Enemy Dead");
 			StartCoroutine(smoke(deathSmokePrefab));
+			waveSpawnerScriptable.bossLeft = false;
 			Destroy(gameObject);
-			// waveSpawnerScriptable.enemiesLeft--;
-
 		}
 	}
 

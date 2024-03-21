@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.41755342, g: 0.55466294, b: 0.685885, a: 1}
+  m_IndirectSpecularColor: {r: 0.418249, g: 0.5538908, b: 0.6838328, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -39812,7 +39812,7 @@ MonoBehaviour:
   enemyPrefab1: {fileID: 7577096291538911305, guid: 7d7eae8a6380d67449da74379d02bdc4, type: 3}
   enemyPrefab2: {fileID: 5738565242562778349, guid: 26d6e4a3fe270ed4a825de33ab540f59, type: 3}
   enemyPrefab3: {fileID: 3869902364208539978, guid: c50fc368a92d3cc4aada1567eadba3a0, type: 3}
-  bossPrefab: {fileID: 8536789676269681216, guid: 2d3335f44bf27624b87cea080c6865a1, type: 3}
+  bossPrefab: {fileID: 0}
   spawnPoint: {fileID: 1765837792}
   difficultyInc: 2
   timeBetweenWaves: 5
@@ -74204,7 +74204,7 @@ MonoBehaviour:
   enemyPrefab1: {fileID: 7577096291538911305, guid: b39026761c242a64aaf2d0d9c720a214, type: 3}
   enemyPrefab2: {fileID: 5738565242562778349, guid: f90edde16ca5ac047b250f145ce8de89, type: 3}
   enemyPrefab3: {fileID: 3869902364208539978, guid: 660ae6b53bb04a24397e803c6d38030b, type: 3}
-  bossPrefab: {fileID: 8536789676269681216, guid: 2d3335f44bf27624b87cea080c6865a1, type: 3}
+  bossPrefab: {fileID: 0}
   spawnPoint: {fileID: 1325111428}
   difficultyInc: 2
   timeBetweenWaves: 5
