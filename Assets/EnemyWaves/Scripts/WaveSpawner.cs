@@ -6,11 +6,13 @@ public class WaveSpawner : MonoBehaviour {
 	public Transform enemyPrefab1;
 	public Transform enemyPrefab2;
 	public Transform enemyPrefab3;
+	public Transform bossPrefab;
 	public Transform spawnPoint;
-	[SerializeField] private int difficulty;
+	// [SerializeField] private int difficulty;
 	[SerializeField] private int difficultyInc;
 	[SerializeField] private float timeBetweenWaves;
 	[SerializeField] private float countdown;
+	// [SerializeField] private float waveNum;
 	[SerializeField] private List<int> wave = new();
 	private bool readyToCountDown = false;
 	public WaveSpawnerScriptableObject waveSpawnerScriptable;
@@ -43,11 +45,11 @@ public class WaveSpawner : MonoBehaviour {
 			readyToCountDown = false;
 			countdown = timeBetweenWaves;
 			StartCoroutine(SpawnWave());
-			difficulty += difficultyInc;
+			waveSpawnerScriptable.difficulty += difficultyInc;
 			flag = true;
 		}
 
-		if (waveSpawnerScriptable.enemiesLeft == 0) {
+		if (waveSpawnerScriptable.enemiesLeft == 0 && waveSpawnerScriptable.bossLeft == false) {
 			//StartCoroutine(chooseUpg());
 			//StartCoroutine(trivia());
 			if(flag){
@@ -68,6 +70,13 @@ public class WaveSpawner : MonoBehaviour {
 
 		waveSpawnerScriptable.enemiesLeft += wave.Count;
 
+		waveSpawnerScriptable.waveNum++;
+
+		if (waveSpawnerScriptable.waveNum % 1 == 0) {
+			Instantiate(bossPrefab, spawnPoint.position, spawnPoint.rotation);
+			waveSpawnerScriptable.bossLeft = true;
+		}
+
 		for(int i = 0; i < wave.Count; i++) {
 			if (wave[i] == 1)
 				Instantiate(enemyPrefab1, spawnPoint.position, spawnPoint.rotation);
@@ -85,7 +94,7 @@ public class WaveSpawner : MonoBehaviour {
 		//create new wave using difficulty
 		int enemyType;
 		int waveDif = 0;
-		for (int i = 0; waveDif < difficulty; i++) {
+		for (int i = 0; waveDif < waveSpawnerScriptable.difficulty; i++) {
 			enemyType = Random.Range(1, 4);
 			wave.Add(enemyType);
 			waveDif += enemyType;
