@@ -39,6 +39,7 @@ public class JSONWriter : MonoBehaviour
 
     public void Save()
     {
+        Debug.Log("Save method has been called");
         Values();
         OutputJSON();
     }
