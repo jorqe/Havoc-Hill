@@ -10,6 +10,7 @@ public class quizOptions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        dropdown.options.Add(new TMP_Dropdown.OptionData("Spanish", null));
         var quizzes = Directory.EnumerateFiles(Application.persistentDataPath, "*.txt");
 
         foreach (string quiz in quizzes){

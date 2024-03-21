@@ -16,8 +16,10 @@ public class TextBoxUpdate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        quizFileName = @"/" + PlayerPrefs.GetString("quiz");
-        lessonFile = new TextAsset(File.ReadAllText(Application.persistentDataPath+quizFileName));
+        if (PlayerPrefs.GetString("quiz") != "Spanish"){
+            quizFileName = @"/" + PlayerPrefs.GetString("quiz");
+            lessonFile = new TextAsset(File.ReadAllText(Application.persistentDataPath+quizFileName));
+        }
         lines = lessonFile.text.Split('\n'); // Split the text into lines
         Debug.Log("first line is " + lines[0]);
     }
