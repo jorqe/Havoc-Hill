@@ -13,9 +13,10 @@ public class NewBehaviourScript : MonoBehaviour
     public bool activeWristUI = true;
     public XRBaseInteractor rightRayInteractor;
     private LineRenderer lineVisual;
-
     public PlayerStatsScriptableObject playerStatsScriptable;
     public BulletScriptableObject BulletScriptable;
+    public GameObject Saver;
+
 
 
     // Start is called before the first frame update
@@ -78,6 +79,8 @@ public class NewBehaviourScript : MonoBehaviour
     public void ExitGame()
     {
         //Application.Quit();
+        //call save
+        Saver.
         SceneManager.LoadScene(0);
     }
 }
