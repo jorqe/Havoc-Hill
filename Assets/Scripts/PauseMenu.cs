@@ -16,8 +16,6 @@ public class NewBehaviourScript : MonoBehaviour
 
     public PlayerStatsScriptableObject playerStatsScriptable;
     public BulletScriptableObject BulletScriptable;
-    public JSONWriter saver;
-
 
 
     // Start is called before the first frame update
@@ -80,7 +78,6 @@ public class NewBehaviourScript : MonoBehaviour
     public void ExitGame()
     {
         //Application.Quit();
-        saver.Save();
         SceneManager.LoadScene(0);
     }
 }

@@ -46,7 +46,7 @@ public class JSONReader : MonoBehaviour
 
         myStatsList = JsonUtility.FromJson<StatsList>(JSONText.text);
         StartCoroutine(WaitAndPrint());
-        fetchValues();
+        AssignValuesToScriptableObjects();
     }
 
     IEnumerator WaitAndPrint()
@@ -58,8 +58,23 @@ public class JSONReader : MonoBehaviour
         Debug.Log("5 seconds have passed!");
     }
 
-    void fetchValues()
+    void AssignValuesToScriptableObjects()
     {
+        /*
+        foreach (Stats stat in myStatsList.stats)
+        {
+            playerStatsScriptable.currentHealth = stat.ph;
+            playerStatsScriptable.maxHealth = stat.mH;
+            BulletScriptable.bulletDamage = stat.bD;
+            BulletScriptable.bulletSpeed = stat.bS;
+            BulletScriptable.DHH = stat.dhh;
+            BulletScriptable.DLH = stat.dlh;
+            BulletScriptable.fireRate = stat.fR;
+            BulletScriptable.critChance = stat.cc;
+        }
+
+        */
+        
             foreach (Stats stat in myStatsList.stats)
         {
 
@@ -71,7 +86,7 @@ public class JSONReader : MonoBehaviour
             }
             else
             {
-                playerStatsScriptable.currentHealth = (stat.ph - 1);
+                playerStatsScriptable.currentHealth = stat.ph;
                 playerStatsScriptable.maxHealth = stat.mH;
             }
 
@@ -92,4 +107,41 @@ public class JSONReader : MonoBehaviour
             stat.DebugStats();
         }
     }
+
+
+
+    /*
+    [System.Serializable]
+    public class Stats
+    {
+        public PlayerStatsScriptableObject playerStatsScriptable;
+        public BulletScriptableObject BulletScriptable;
+
+        public int ph;
+        public int mH;
+        public int bD;
+        public double bS;
+        public int dhh;
+        public int dlh;
+        public int fR;
+        public int cc;
+        public List<values> stats = new List<values>();
+
+
+        void Update()
+        {
+            ph = playerStatsScriptable.currentHealth;
+            mH = playerStatsScriptable.maxHealth;
+            bD = BulletScriptable.bulletDamage;
+            bS = BulletScriptable.bulletSpeed;
+            dhh = BulletScriptable.DHH;
+            dlh = BulletScriptable.DLH;
+            fR = BulletScriptable.fireRate;
+            cc = BulletScriptable.critChance;
+
+
+        }
+
+    }*/
+
 }
