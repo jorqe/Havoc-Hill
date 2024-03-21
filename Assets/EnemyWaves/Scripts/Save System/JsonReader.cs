@@ -22,12 +22,12 @@ public class JSONReader : MonoBehaviour
         public int dhh;
         public int dlh;
         public int fR;
-        public int cc;
+        public int cc;//local variables to pull the values
 
         public void DebugStats()
         {
             Debug.Log($"Player Health: {ph}, Max Health: {mH}, Bullet Damage: {bD}, Bullet Speed: {bS}, Damage High Health: {dhh}, Damage Low Health: {dlh}, Fire Rate: {fR}, Crit Chance: {cc}");
-        }
+        }//shows values pulled, if any were pulled.
     }
 
 
@@ -60,7 +60,22 @@ public class JSONReader : MonoBehaviour
 
     void AssignValuesToScriptableObjects()
     {
+        /*
         foreach (Stats stat in myStatsList.stats)
+        {
+            playerStatsScriptable.currentHealth = stat.ph;
+            playerStatsScriptable.maxHealth = stat.mH;
+            BulletScriptable.bulletDamage = stat.bD;
+            BulletScriptable.bulletSpeed = stat.bS;
+            BulletScriptable.DHH = stat.dhh;
+            BulletScriptable.DLH = stat.dlh;
+            BulletScriptable.fireRate = stat.fR;
+            BulletScriptable.critChance = stat.cc;
+        }
+
+        */
+        
+            foreach (Stats stat in myStatsList.stats)
         {
 
             stat.DebugStats();
@@ -75,7 +90,7 @@ public class JSONReader : MonoBehaviour
                 playerStatsScriptable.maxHealth = stat.mH;
             }
 
-            if (stat.BulletScriptable == null)
+            if (BulletScriptable == null)
             {
                 Debug.LogError("BulletScriptable is null");
             }
