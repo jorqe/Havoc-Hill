@@ -37,7 +37,7 @@ public class JSONWriter : MonoBehaviour
         Debug.Log(Application.dataPath);
     }
 
-    void Start()
+    public void Save()
     {
         Values();
         OutputJSON();

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4182492, g: 0.5539532, b: 0.6838386, a: 1}
+  m_IndirectSpecularColor: {r: 0.41755342, g: 0.55466294, b: 0.685885, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -44234,6 +44234,7 @@ MonoBehaviour:
   rightRayInteractor: {fileID: 1672531859}
   playerStatsScriptable: {fileID: 11400000, guid: 21f263f98f36367428ee75e7287aa09a, type: 2}
   BulletScriptable: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
+  saver: {fileID: 1119498484}
 --- !u!1001 &1078608438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46068,7 +46069,7 @@ MonoBehaviour:
   JSONText: {fileID: 4900000, guid: 3c14ce8831eb00e42981f70d1a6270f9, type: 3}
   BulletScriptable: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
   playerStatsScriptable: {fileID: 11400000, guid: 21f263f98f36367428ee75e7287aa09a, type: 2}
-  myStatsList:
+  statsWrapper:
     stats: []
 --- !u!1001 &1120351433
 PrefabInstance:
