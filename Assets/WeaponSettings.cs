@@ -11,7 +11,7 @@ public class WeaponSettings : MonoBehaviour
     // Start is called before the first frame update
     void OnDisable()
     {
-        PlayerPrefs.SetInt("WeaponSettings", dropdown.value);
+        PlayerPrefs.SetString("WeaponSettings", dropdown.options[dropdown.value].text);
         
     }
 

@@ -15,7 +15,7 @@ public class WaveSpawner : MonoBehaviour {
 	[SerializeField] private float countdown;
 	// [SerializeField] private float waveNum;
 	[SerializeField] private List<int> wave = new();
-	private bool readyToCountDown = false;
+	private bool readyToCountDown = true;
 	public WaveSpawnerScriptableObject waveSpawnerScriptable;
 	public TriviaInputScriptableObject triviaInputScriptable;
 	public TextBoxUpdate textBoxUpdate;
@@ -64,7 +64,7 @@ public class WaveSpawner : MonoBehaviour {
 	}
 
 	IEnumerator SpawnWave() {
-		//Debug.Log("inside spawn wave");
+		Debug.Log("inside spawn wave");
         triviaInputScriptable.givenAnswer = "Testing";
 
         CreateWave();

@@ -44,17 +44,22 @@ public class ToggleHoldDropdown : MonoBehaviour
 
     void Start()
     {
+
+        Debug.Log("Select action trigger option" + directInteractor.selectActionTrigger);
+        Debug.Log("WeaponSetting is " + PlayerPrefs.GetString("WeaponSetting"));
         // Update "Select Action Trigger"
-        switch (PlayerPrefs.GetInt("WeaponSetting"))
+        switch (PlayerPrefs.GetString("WeaponSetting"))
         {
     
-            case 2: // Toggle
+            case "Hold": // Toggle
                 directInteractor.selectActionTrigger = XRBaseControllerInteractor.InputTriggerType.Toggle;
                 break;
-            case 1: // Sticky 
+            case "Sticky": // Sticky 
                 directInteractor.selectActionTrigger = XRBaseControllerInteractor.InputTriggerType.Sticky;
                 break;
         }
+
+        Debug.Log("new Select action trigger option" + directInteractor.selectActionTrigger);
          
     }
 }

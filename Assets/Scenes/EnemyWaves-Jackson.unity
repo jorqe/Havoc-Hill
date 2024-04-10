@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.418249, g: 0.5538908, b: 0.6838328, a: 1}
+  m_IndirectSpecularColor: {r: 0.41755342, g: 0.55466294, b: 0.685885, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -44235,6 +44235,7 @@ MonoBehaviour:
   rightRayInteractor: {fileID: 1672531859}
   playerStatsScriptable: {fileID: 11400000, guid: 21f263f98f36367428ee75e7287aa09a, type: 2}
   BulletScriptable: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
+  saver: {fileID: 1119498484}
 --- !u!114 &1077547283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57593,6 +57594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17bc8ab0244d47442a9761839eaaabe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonValue: False
   press: {fileID: 1392735784}
   questionInterface: {fileID: 1116070866}
   textBoxUpdate: {fileID: 2004392289}
@@ -68175,6 +68177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17bc8ab0244d47442a9761839eaaabe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonValue: True
   press: {fileID: 702078517}
   questionInterface: {fileID: 1116070866}
   textBoxUpdate: {fileID: 2004392289}

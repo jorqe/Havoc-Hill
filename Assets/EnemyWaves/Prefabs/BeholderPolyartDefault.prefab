@@ -673,6 +673,7 @@ GameObject:
   - component: {fileID: 8536789676269681216}
   - component: {fileID: 7632342263911226486}
   - component: {fileID: -1964369224556584812}
+  - component: {fileID: 6174936227811022499}
   m_Layer: 0
   m_Name: BeholderPolyartDefault
   m_TagString: Untagged
@@ -732,7 +733,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   health: 50
-  waypointsNum: 1
   waveSpawnerScriptable: {fileID: 11400000, guid: 810622195c34cfc4caa9d1eb8c06cca4, type: 2}
   bullet: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
   playerStatsScriptable: {fileID: 11400000, guid: 21f263f98f36367428ee75e7287aa09a, type: 2}
@@ -742,6 +742,29 @@ MonoBehaviour:
   damageSmokePrefab: {fileID: 3283401868584669295, guid: 5423072da79b1c14694026d3f1f06d7d, type: 3}
   idleSound: {fileID: 0}
   flash_material: {fileID: 2100000, guid: 8b5c0a0bb6ed8dc48bc306a6912f24c5, type: 2}
+--- !u!136 &6174936227811022499
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4631726247913799874}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.4498966, z: 0}
 --- !u!1 &4705245607064492459
 GameObject:
   m_ObjectHideFlags: 0
