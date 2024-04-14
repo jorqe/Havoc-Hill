@@ -48,7 +48,7 @@ public class JSONReader : MonoBehaviour
         string filePath = Path.Combine(Application.persistentDataPath, "JsonText.txt");
         string dataAsJson = File.ReadAllText(filePath);
         myStatsList = JsonUtility.FromJson<StatsList>(dataAsJson);
-        StartCoroutine(WaitAndPrint());
+        //StartCoroutine(WaitAndPrint());
         fetchValues();
     }
 
