@@ -8,7 +8,11 @@ public class JSONReader : MonoBehaviour
     //public TextAsset JSONText;
     public BulletScriptableObject BulletScriptable;
     public PlayerStatsScriptableObject playerStatsScriptable;
-    
+
+    private void Start()
+    {
+        Load();
+    }
 
     [System.Serializable]
     public class Stats
