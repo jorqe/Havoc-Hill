@@ -17,6 +17,7 @@ public class NewBehaviourScript : MonoBehaviour
     public PlayerStatsScriptableObject playerStatsScriptable;
     public BulletScriptableObject BulletScriptable;
     public JSONWriter saver;
+    public JSONReader loader;
 
 
 
@@ -57,7 +58,6 @@ public class NewBehaviourScript : MonoBehaviour
             Time.timeScale = 0;
             XRInteractorLineVisual lineVisual = rightRayInteractor.GetComponentInChildren<XRInteractorLineVisual>();
             lineVisual.enabled = true;
-
         }
     }
 
@@ -74,13 +74,31 @@ public class NewBehaviourScript : MonoBehaviour
         BulletScriptable.DLH = 0;
         BulletScriptable.fireRate = 1;
         BulletScriptable.critChance = 1;
-
     }
 
     public void ExitGame()
     {
         //Application.Quit();
-        saver.Save();
+        
         SceneManager.LoadScene(0);
+    }
+
+    public void SaveGame()
+    {
+        if (saver != null)
+        {
+            saver.Save();
+        }
+        else
+        {
+
+
+            Application.Quit();
+        }
+    }
+
+    public void LoadGame()
+    {
+        loader.Load();
     }
 }

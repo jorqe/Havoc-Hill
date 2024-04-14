@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class JSONReader : MonoBehaviour
 {
-    public TextAsset JSONText;
+    //public TextAsset JSONText;
     public BulletScriptableObject BulletScriptable;
     public PlayerStatsScriptableObject playerStatsScriptable;
     
@@ -41,10 +42,12 @@ public class JSONReader : MonoBehaviour
     public StatsList myStatsList = new StatsList();
 
 
-    void Start()
+    public void Load()
     {
 
-        myStatsList = JsonUtility.FromJson<StatsList>(JSONText.text);
+        string filePath = Path.Combine(Application.persistentDataPath, "JsonText.txt");
+        string dataAsJson = File.ReadAllText(filePath);
+        myStatsList = JsonUtility.FromJson<StatsList>(dataAsJson);
         StartCoroutine(WaitAndPrint());
         fetchValues();
     }
