@@ -29,6 +29,7 @@ public class WaveSpawner : MonoBehaviour {
 	public bool flag2 = true;
 	public bool flag3 = true;
 	public string current_answer;
+	public JSONWriter saver;
 
 
 	void Start() {
@@ -120,6 +121,7 @@ public class WaveSpawner : MonoBehaviour {
 	IEnumerator trivia() {
 		if(flag2){
 			questionInterface.SetActive(true);
+			saver.Save();
 			textBoxUpdate.DisplayRandomTrivia();
             current_answer = textBoxUpdate.getAnswer();
             Debug.Log("Current Answer = " + current_answer);
