@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 	[SerializeField] private float speed;
 	[SerializeField] private float health;
 	[SerializeField] private int waypointsNum;
+	private int pointsWorth = 50;
 	private Transform target;
 	private int wavepointIndex = 0;
 	private WaveSpawner waveSpawner;
@@ -152,6 +153,8 @@ public class Enemy : MonoBehaviour
 		{
 			Debug.Log("Enemy Dead");
 			StartCoroutine(smoke(deathSmokePrefab));
+			playerStatsScriptable.score += pointsWorth;
+			Debug.Log("Score = " + playerStatsScriptable.score);
 			Destroy(gameObject);
 			waveSpawnerScriptable.enemiesLeft--;
 

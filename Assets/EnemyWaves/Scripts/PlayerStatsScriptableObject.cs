@@ -6,4 +6,5 @@ using UnityEngine;
 public class PlayerStatsScriptableObject : ScriptableObject {
     public int maxHealth = 200;
     public int currentHealth = 200;
+    public int score = 0;
 }

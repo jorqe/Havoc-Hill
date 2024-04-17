@@ -6,6 +6,7 @@ public class BossEnemy : MonoBehaviour
 
 	[SerializeField] private float speed;
 	[SerializeField] private float health;
+	private int pointsWorth = 100;
 	private Transform target;
 	private int wavepointIndex = 0;
 	private WaveSpawner waveSpawner;
@@ -118,6 +119,8 @@ public class BossEnemy : MonoBehaviour
 		if (health <= 0)
 		{
 			Debug.Log("Enemy Dead");
+			playerStatsScriptable.score += pointsWorth;
+			Debug.Log("Score = " + playerStatsScriptable.score);
 			StartCoroutine(smoke(deathSmokePrefab));
 			waveSpawnerScriptable.bossLeft = false;
 			Destroy(gameObject);
