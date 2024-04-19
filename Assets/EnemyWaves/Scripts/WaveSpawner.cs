@@ -54,6 +54,7 @@ public class WaveSpawner : MonoBehaviour {
 		if (waveSpawnerScriptable.enemiesLeft == 0 && waveSpawnerScriptable.bossLeft == false) {
 			//StartCoroutine(chooseUpg());
 			//StartCoroutine(trivia());
+			saver.Save();
 			if(flag){
 				StartCoroutine(endOfWave());
 			}

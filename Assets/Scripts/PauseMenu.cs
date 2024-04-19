@@ -87,7 +87,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (saver != null)
         {
-            saver.Save();
+            saver.killSave();
         }
         else
         {

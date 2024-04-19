@@ -13,6 +13,10 @@ public class JSONReader : MonoBehaviour
     {
         Load();
     }
+    void Update()
+    {
+        //Load();
+    }
 
     [System.Serializable]
     public class Stats
