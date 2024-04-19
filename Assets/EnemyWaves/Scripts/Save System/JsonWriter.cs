@@ -45,6 +45,12 @@ public class JSONWriter : MonoBehaviour
         OutputJSON();
     }
 
+    public void deathSave()
+    {
+        DefValues();
+        OutputJSON();
+    }
+
 
     //calls button press
     void Values()
@@ -63,4 +69,23 @@ public class JSONWriter : MonoBehaviour
         statsWrapper.stats.Clear();
         statsWrapper.stats.Add(stats);
     }
+
+    void DefValues()
+    {
+        Stats stats = new Stats
+        {
+            ph = 200.ToString(),
+            mH = 200.ToString(),
+            bD = 10.ToString(),
+            bS = 10.ToString(),
+            dhh = 0.ToString(),
+            dlh = 0.ToString(),
+            fR = 5.ToString(),
+            cc = 1.ToString()
+        };
+        statsWrapper.stats.Clear();
+        statsWrapper.stats.Add(stats);
+    }
+
+
 }
