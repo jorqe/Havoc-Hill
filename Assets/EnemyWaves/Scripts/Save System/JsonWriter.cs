@@ -8,6 +8,7 @@ public class JSONWriter : MonoBehaviour
     public TextAsset JSONText;
     public BulletScriptableObject BulletScriptable;
     public PlayerStatsScriptableObject playerStatsScriptable;
+    public SetText saveName;
 
     [System.Serializable]
     public class Stats

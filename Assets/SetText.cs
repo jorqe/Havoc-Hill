@@ -30,6 +30,39 @@ public class SetText : MonoBehaviour
                 saver.deathSave();
             }
         }
+
+        if (!File.Exists(filePath1))
+        {
+            Yas = "No file existing";
+            saver.deathSave();
+        }
+        else if (File.Exists(filePath1))
+        {
+            string json = File.ReadAllText(filePath1);
+            JSONReader.StatsList statsList = JsonUtility.FromJson<JSONReader.StatsList>(json);
+            if (statsList.stats.Length > 0 && statsList.stats[0].ph <= 0)
+            {
+                // Call DeathSave() from JSONWriter
+                saver.deathSave();
+            }
+        }
+
+        if (!File.Exists(filePath2))
+        {
+            Yas = "No file existing";
+            saver.deathSave();
+        }
+        else if (File.Exists(filePath2))
+        {
+            string json = File.ReadAllText(filePath2);
+            JSONReader.StatsList statsList = JsonUtility.FromJson<JSONReader.StatsList>(json);
+            if (statsList.stats.Length > 0 && statsList.stats[0].ph <= 0)
+            {
+                // Call DeathSave() from JSONWriter
+                saver.deathSave();
+            }
+        }
+
     }
 
     void Update()
@@ -39,7 +72,6 @@ public class SetText : MonoBehaviour
         if (File.Exists(filePath))
         {
             string json = File.ReadAllText(filePath);
-            //MessageData data = JsonUtility.FromJson<MessageData>(json);
             messageText.SetText(json);
 
         }

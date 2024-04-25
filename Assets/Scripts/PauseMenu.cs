@@ -19,17 +19,10 @@ public class NewBehaviourScript : MonoBehaviour
     public JSONWriter saver;
     public JSONReader loader;
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
         DisplayWristUI();
-
-
-
     }
-
     public void PauseButtonPress(InputAction.CallbackContext context)
     {
         if(context.performed)
@@ -37,10 +30,8 @@ public class NewBehaviourScript : MonoBehaviour
             DisplayWristUI();
         }
     }
-
     public void DisplayWristUI()
     {
- 
         if (activeWristUI)
         {
             wristUI.SetActive(false);
@@ -48,8 +39,6 @@ public class NewBehaviourScript : MonoBehaviour
             Time.timeScale = 1;
             XRInteractorLineVisual lineVisual = rightRayInteractor.GetComponentInChildren<XRInteractorLineVisual>();
             lineVisual.enabled = false;
-
-
         }
         else if(!activeWristUI)
         {
@@ -60,29 +49,15 @@ public class NewBehaviourScript : MonoBehaviour
             lineVisual.enabled = true;
         }
     }
-
-
-
     public void RestartGame()
     {
+        saver.deathSave();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        playerStatsScriptable.currentHealth = 200;
-        playerStatsScriptable.maxHealth = 200;
-        BulletScriptable.bulletDamage = 10;
-        BulletScriptable.bulletSpeed = 10;
-        BulletScriptable.DHH = 0;
-        BulletScriptable.DLH = 0;
-        BulletScriptable.fireRate = 1;
-        BulletScriptable.critChance = 1;
     }
-
     public void ExitGame()
     {
-        //Application.Quit();
-        
         SceneManager.LoadScene(0);
     }
-
     public void SaveGame()
     {
         if (saver != null)
@@ -91,14 +66,7 @@ public class NewBehaviourScript : MonoBehaviour
         }
         else
         {
-
-
             Application.Quit();
         }
-    }
-
-    public void LoadGame()
-    {
-        loader.Load();
     }
 }
