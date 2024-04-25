@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.41755342, g: 0.55466294, b: 0.685885, a: 1}
+  m_IndirectSpecularColor: {r: 0.418249, g: 0.5538908, b: 0.6838328, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -22492,6 +22492,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageText: {fileID: 503271762}
+  saver: {fileID: 0}
+  Yas: 
 --- !u!1001 &503414067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48332,7 +48334,7 @@ MonoBehaviour:
   enemyPrefab1: {fileID: 7577096291538911305, guid: 426a70413e0faaa4fb4a7a0ba6e5100b, type: 3}
   enemyPrefab2: {fileID: 5738565242562778349, guid: e5d598b1bb92cfe4ab60c3657815eb78, type: 3}
   enemyPrefab3: {fileID: 3869902364208539978, guid: bb6393c2d91ff2b4ba28a19b5d3942ab, type: 3}
-  bossPrefab: {fileID: 8536789676269681216, guid: 2d3335f44bf27624b87cea080c6865a1, type: 3}
+  bossPrefab: {fileID: 2585183677429954913, guid: 1bdfa5a5870427943a15e6da81bebb82, type: 3}
   spawnPoint: {fileID: 1070456049}
   difficultyInc: 2
   timeBetweenWaves: 5

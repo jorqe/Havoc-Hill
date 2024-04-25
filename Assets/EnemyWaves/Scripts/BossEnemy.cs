@@ -1,11 +1,12 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class BossEnemy : MonoBehaviour
 {
 
 	[SerializeField] private float speed;
-	[SerializeField] private float health;
+	[SerializeField] public float health;
 	private int pointsWorth = 100;
 	private Transform target;
 	private int wavepointIndex = 0;
@@ -29,6 +30,7 @@ public class BossEnemy : MonoBehaviour
 		target = Waypoints.points[0];
 		waveSpawner = GetComponentInParent<WaveSpawner>();
 		animator = GetComponent<Animator>();
+		// health = maxHealth;
 	}
 
 	void Update() {
@@ -46,6 +48,20 @@ public class BossEnemy : MonoBehaviour
 		{
 			StartCoroutine(GetNextWaypoint());
 		}
+
+        // if (Input.GetKeyDown(KeyCode.Space)) {
+        //     health -= 10;
+        // }
+
+		// if (health <= 0)
+		// {
+		// 	Debug.Log("Enemy Dead");
+		// 	playerStatsScriptable.score += pointsWorth;
+		// 	Debug.Log("Score = " + playerStatsScriptable.score);
+		// 	StartCoroutine(smoke(deathSmokePrefab));
+		// 	waveSpawnerScriptable.bossLeft = false;
+		// 	Destroy(gameObject); 
+		// }
 	}
 
 	IEnumerator GetNextWaypoint() {
