@@ -36,6 +36,7 @@ public class JSONReader : MonoBehaviour
 
         public int ph;
         public int mH;
+        public int scr;
         public int bD;
         public float bS;
         public int dhh;
@@ -44,6 +45,7 @@ public class JSONReader : MonoBehaviour
         public int cc;//local variables to pull the values
         public int dif;
         public int wave;
+        
 
         public void DebugStats()
         {
@@ -94,8 +96,9 @@ public class JSONReader : MonoBehaviour
             }
             else
             {
-                playerStatsScriptable.currentHealth = (stat.ph - 1);
+                playerStatsScriptable.currentHealth = (stat.ph);
                 playerStatsScriptable.maxHealth = stat.mH;
+                playerStatsScriptable.score = stat.scr;
             }
 
             if (BulletScriptable == null)
