@@ -8,11 +8,21 @@ public class JSONReader : MonoBehaviour
     //public TextAsset JSONText;
     public BulletScriptableObject BulletScriptable;
     public PlayerStatsScriptableObject playerStatsScriptable;
+    public SaveSelection Select;
+    public WaveSpawnerScriptableObject WaveScript;
+    public string savePath;
+    public string filePath;
+    
 
-    private void Start()
-    {
-        Load();
-    }
+
+
+         void Start()
+         {
+            savePath = Path.Combine(Application.persistentDataPath, "SaveSelection.txt");
+            string textFromFile = File.ReadAllText(savePath);
+            filePath = Path.Combine(Application.persistentDataPath, textFromFile);
+            Load();
+         }
     void Update()
     {
         //Load();
@@ -32,6 +42,8 @@ public class JSONReader : MonoBehaviour
         public int dlh;
         public int fR;
         public int cc;//local variables to pull the values
+        public int dif;
+        public int wave;
 
         public void DebugStats()
         {
@@ -53,7 +65,7 @@ public class JSONReader : MonoBehaviour
     public void Load()
     {
 
-        string filePath = Path.Combine(Application.persistentDataPath, "JsonText.txt");
+        //string filePath = Path.Combine(Application.persistentDataPath, "JsonText.txt");
         string dataAsJson = File.ReadAllText(filePath);
         myStatsList = JsonUtility.FromJson<StatsList>(dataAsJson);
         //StartCoroutine(WaitAndPrint());
@@ -99,6 +111,15 @@ public class JSONReader : MonoBehaviour
                 BulletScriptable.DLH = stat.dlh;
                 BulletScriptable.fireRate = stat.fR;
                 BulletScriptable.critChance = stat.cc;
+            }
+            if (WaveScript == null)
+            {
+                Application.Quit();
+            }
+            else
+            {
+                WaveScript.waveNum = stat.wave;
+                WaveScript.difficulty = stat.dif;
             }
             stat.DebugStats();
         }

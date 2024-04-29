@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesLeft: 0
   damage: 12
-  difficulty: 1
+  difficulty: 12
   waveNum: 22
   bossLeft: 0
