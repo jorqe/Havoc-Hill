@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Linq;
+using TMPro;
 
 public class QuestionButton : MonoBehaviour
 {
@@ -11,10 +12,14 @@ public class QuestionButton : MonoBehaviour
     public GameObject questionInterface;
     public TextBoxUpdate textBoxUpdate;
     public TriviaInputScriptableObject triviaInputScriptable;
+    public PlayerStatsScriptableObject playerStats;
     public string current_answer;
     bool isPressed;
     GameObject presser;
     string buttonName;
+    public TMP_Text answerText;
+    public TMP_Text comboText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +31,17 @@ public class QuestionButton : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnEnable()
+    {
+        if (PlayerPrefs.GetString("quiz") != "Spanish")
+        {
+            string sampleAnswer = textBoxUpdate.popAnswers();
+            answerText.text = sampleAnswer;
+            buttonValue = sampleAnswer.TrimEnd(new char[] { '\r', '\n' });
+            Debug.Log("Button Name is " + buttonName + "sampleAnswer is " + sampleAnswer);
+        }
     }
 
     private void OnTriggerEnter(Collider other){
@@ -57,12 +73,15 @@ public class QuestionButton : MonoBehaviour
             if (buttonValue == current_answer){
                 Debug.Log("Correct");
                 triviaInputScriptable.givenAnswer = "Correct";
+                playerStats.combo += 1;
 
             }
             else{
                 Debug.Log("Incorrect");
                 triviaInputScriptable.givenAnswer = "Incorrect";
+                playerStats.combo = 1;
             }
+            comboText.text = playerStats.combo.ToString();
             isPressed = false;
             questionInterface.SetActive(false);
         }

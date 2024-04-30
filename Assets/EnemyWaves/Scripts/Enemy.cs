@@ -153,7 +153,7 @@ public class Enemy : MonoBehaviour
 		{
 			Debug.Log("Enemy Dead");
 			StartCoroutine(smoke(deathSmokePrefab));
-			playerStatsScriptable.score += pointsWorth;
+			playerStatsScriptable.score += (pointsWorth * playerStatsScriptable.combo);
 			Debug.Log("Score = " + playerStatsScriptable.score);
 			Destroy(gameObject);
 			waveSpawnerScriptable.enemiesLeft--;

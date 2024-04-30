@@ -121,9 +121,15 @@ public class WaveSpawner : MonoBehaviour {
 
 	IEnumerator trivia() {
 		if(flag2){
+			textBoxUpdate.DisplayRandomTrivia();
+			if (PlayerPrefs.GetString("quiz") != "Spanish")
+            {
+				yield return new WaitForSeconds(5);
+				textBoxUpdate.setUpAnswers();
+            }
+
 			questionInterface.SetActive(true);
 			saver.Save();
-			textBoxUpdate.DisplayRandomTrivia();
             current_answer = textBoxUpdate.getAnswer();
             Debug.Log("Current Answer = " + current_answer);
             flag2 = false;

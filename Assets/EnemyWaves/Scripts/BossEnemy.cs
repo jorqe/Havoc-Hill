@@ -135,7 +135,7 @@ public class BossEnemy : MonoBehaviour
 		if (health <= 0)
 		{
 			Debug.Log("Enemy Dead");
-			playerStatsScriptable.score += pointsWorth;
+			playerStatsScriptable.score += (pointsWorth * playerStatsScriptable.combo);
 			Debug.Log("Score = " + playerStatsScriptable.score);
 			StartCoroutine(smoke(deathSmokePrefab));
 			waveSpawnerScriptable.bossLeft = false;

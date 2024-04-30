@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef12759e697e2414d95a7f84a8640157, type: 3}
   m_Name: BulletScriptableObject
   m_EditorClassIdentifier: 
-  bulletSpeed: 10
+  bulletSpeed: 20
   bulletDamage: 50
-  DHH: 9
-  DLH: 2
-  critChance: 4
+  DHH: 0
+  DLH: 0
+  critChance: 1
   fireRate: 10
