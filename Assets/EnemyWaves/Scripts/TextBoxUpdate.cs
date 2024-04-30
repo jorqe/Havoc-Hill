@@ -73,17 +73,14 @@ public class TextBoxUpdate : MonoBehaviour
             {
                 Debug.Log("lmod = " + lmod);
                 temp.Add(index + 2);
-                //answers.Push(index + 2);
             }
             else if (lmod == 2)
             {
                 Debug.Log("lmod = " + lmod);
                 temp.Add(index);
-                //answers.Push(index);
             }
             else
             {
-                //answers.Push(index + 1);
                 temp.Add(index + 1);
             }
         }
@@ -101,7 +98,6 @@ public class TextBoxUpdate : MonoBehaviour
 
     public string popAnswers()
     {
-        //int temp = answers.Pop();
         return lines[answers.Pop()];
     }
 }

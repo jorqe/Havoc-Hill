@@ -200,7 +200,7 @@ namespace Keyboard
         {
             if (!quizTitle){
                 Debug.Log("in if statement");
-                quizText.text = "Enter question";
+                quizText.text = "Enter hint";
                 quizFileName = @"/" + outputField.text + ".txt";
                 quizTitle = true;
                 flag++;
@@ -208,11 +208,11 @@ namespace Keyboard
             }
             else{
                 if (flag == 0){
-                    quizText.text = "Enter question";
+                    quizText.text = "Enter hint";
                     flag++;
                 }
                 else if (flag == 1){
-                    quizText.text = "Enter hint";
+                    quizText.text = "Enter question";
                     flag++;
                 }
                 else{
