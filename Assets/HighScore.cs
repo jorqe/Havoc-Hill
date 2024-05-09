@@ -17,6 +17,22 @@ public class HighScore : MonoBehaviour
 
     void Start()
     {
+        highScoreFilePath = Path.Combine(Application.persistentDataPath, "HighScore");
+        Directory.CreateDirectory(highScoreFilePath);
+        highScoreFilePath = Path.Combine(highScoreFilePath, "highscore.txt");
+
+        if (!File.Exists(highScoreFilePath))
+        {
+            messageText.text = "0";
+        }
+        else
+        {
+            StreamReader sr = new StreamReader(highScoreFilePath);
+            string highscore = sr.ReadLine();
+            messageText.text = highscore;
+            sr.Close();
+        }
+
         /*ScoreFilePath = Path.Combine(Application.persistentDataPath, "Score.txt");
         highScoreFilePath = Path.Combine(Application.persistentDataPath, "HighScore.txt");
         if (!File.Exists(highScoreFilePath))

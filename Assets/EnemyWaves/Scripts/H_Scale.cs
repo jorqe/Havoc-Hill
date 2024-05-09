@@ -12,6 +12,7 @@ public class H_Scale : MonoBehaviour {
 
     public string savePath;
     public string filePath;
+    private string highscorePath;
 
 
     void Start()
@@ -48,6 +49,28 @@ public class H_Scale : MonoBehaviour {
 
         if (playerStatsScriptable.currentHealth <= 0f)
         {
+            highscorePath = Path.Combine(Application.persistentDataPath, "HighScore");
+            Directory.CreateDirectory(highscorePath);
+            highscorePath = Path.Combine(highscorePath, "highscore.txt");
+            if (!File.Exists(highscorePath))
+            {
+                StreamWriter sw = new StreamWriter(highscorePath);
+                sw.WriteLine(playerStatsScriptable.score);
+                sw.Close();
+            }
+            else
+            {
+                StreamReader sr = new StreamReader(highscorePath);
+                int highscore = int.Parse(sr.ReadLine());
+                sr.Close();
+                if (playerStatsScriptable.score > highscore)
+                {
+                    StreamWriter sw = new StreamWriter(highscorePath);
+                    sw.WriteLine(playerStatsScriptable.score);
+                    sw.Close();
+                }
+
+            }
 
             File.Delete(getPath());
             SceneManager.LoadScene(0);
