@@ -20,6 +20,7 @@ public class WaveSpawner : MonoBehaviour {
 	public WaveSpawnerScriptableObject waveSpawnerScriptable;
 	public TriviaInputScriptableObject triviaInputScriptable;
 	public TextBoxUpdate textBoxUpdate;
+	public HintBoxUpdate hintBoxUpdate;
 	public GameObject questionInterface;
 	public GameObject button1;
 	public GameObject button2;

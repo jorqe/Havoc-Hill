@@ -15,9 +15,9 @@ public class Enemy : MonoBehaviour
 	public BulletScriptableObject bullet;
 	public PlayerStatsScriptableObject playerStatsScriptable;
 	public TriviaInputScriptableObject triviaInputScriptable;
-	//public SoundEffectPlayer SFXPlayer;
-	//public AudioClip enemySound;
-	public float volume = 0.5f;
+    //public SoundEffectPlayer SFXPlayer;
+    //public AudioClip enemySound;
+    public float volume = 0.5f;
 	public GameObject deathSmokePrefab;
 	public GameObject damageSmokePrefab;
 	public AudioSource idleSound;
@@ -61,7 +61,8 @@ public class Enemy : MonoBehaviour
 				waveSpawnerScriptable.enemiesLeft--;
 				StartCoroutine(smoke(damageSmokePrefab));
 				playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
-				return;
+                triviaInputScriptable.hint_flag = 1;
+                return;
 			}
 			target = Waypoints.points[wavepointIndex];
 			transform.LookAt(target);
@@ -75,6 +76,7 @@ public class Enemy : MonoBehaviour
 				waveSpawnerScriptable.enemiesLeft--;
 				StartCoroutine(smoke(damageSmokePrefab));
 				playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
+                triviaInputScriptable.hint_flag = 1;
                 return;
 			}
 			target = Waypoints2.points[wavepointIndex];
@@ -89,7 +91,8 @@ public class Enemy : MonoBehaviour
 				waveSpawnerScriptable.enemiesLeft--;
 				StartCoroutine(smoke(damageSmokePrefab));
 				playerStatsScriptable.currentHealth -= waveSpawnerScriptable.damage;
-				return;
+                triviaInputScriptable.hint_flag = 1;
+                return;
 			}
 			target = Waypoints3.points[wavepointIndex];
 			transform.LookAt(target);
@@ -153,9 +156,15 @@ public class Enemy : MonoBehaviour
 		{
 			Debug.Log("Enemy Dead");
 			StartCoroutine(smoke(deathSmokePrefab));
+			
 			playerStatsScriptable.score += (pointsWorth * playerStatsScriptable.combo);
 			Debug.Log("Score = " + playerStatsScriptable.score);
+			
+            playerStatsScriptable.score += pointsWorth;
+            Debug.Log("Score = " + playerStatsScriptable.score);
+			
 			Destroy(gameObject);
+			triviaInputScriptable.hint_flag = 1;
 			waveSpawnerScriptable.enemiesLeft--;
 
 		}

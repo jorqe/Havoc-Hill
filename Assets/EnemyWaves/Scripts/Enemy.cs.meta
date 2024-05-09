@@ -5,9 +5,9 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - waveSpawnerScriptable: {fileID: 11400000, guid: 810622195c34cfc4caa9d1eb8c06cca4, type: 2}
-  - bullet: {instanceID: 0}
+  - bullet: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
   - playerStatsScriptable: {instanceID: 0}
-  - SFXPlayer: {instanceID: 0}
+  - triviaInputScriptable: {fileID: 11400000, guid: 3ec2c0bd91ac7b34ea478658b589b60d, type: 2}
   - deathSmokePrefab: {instanceID: 0}
   - damageSmokePrefab: {instanceID: 0}
   - idleSound: {instanceID: 0}

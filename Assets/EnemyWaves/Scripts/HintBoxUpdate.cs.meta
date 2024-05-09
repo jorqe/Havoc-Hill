@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2e44e32dd73f6e142be02f39052dcf4b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - hintText: {instanceID: 0}
+  - lessonFile: {fileID: 4900000, guid: 20e28a875d887c444b23aa1750e3c588, type: 3}
+  - TriviaInputScriptable: {fileID: 11400000, guid: 3ec2c0bd91ac7b34ea478658b589b60d, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
