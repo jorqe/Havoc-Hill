@@ -12,17 +12,17 @@ public class JSONReader : MonoBehaviour
     public WaveSpawnerScriptableObject WaveScript;
     public string savePath;
     public string filePath;
-    
 
 
 
-         void Start()
-         {
-            savePath = Path.Combine(Application.persistentDataPath, "SaveSelection.txt");
-            string textFromFile = File.ReadAllText(savePath);
-            filePath = Path.Combine(Application.persistentDataPath, textFromFile);
-            Load();
-         }
+
+    void Start()
+    {
+        savePath = Path.Combine(Application.persistentDataPath, "SaveSelection.txt");
+        string textFromFile = File.ReadAllText(savePath);
+        filePath = Path.Combine(Application.persistentDataPath, textFromFile);
+        Load();
+    }
     void Update()
     {
         //Load();
@@ -36,7 +36,6 @@ public class JSONReader : MonoBehaviour
 
         public int ph;
         public int mH;
-        public int scr;
         public int bD;
         public float bS;
         public int dhh;
@@ -45,7 +44,6 @@ public class JSONReader : MonoBehaviour
         public int cc;//local variables to pull the values
         public int dif;
         public int wave;
-        
 
         public void DebugStats()
         {
@@ -85,7 +83,7 @@ public class JSONReader : MonoBehaviour
 
     void fetchValues()
     {
-            foreach (Stats stat in myStatsList.stats)
+        foreach (Stats stat in myStatsList.stats)
         {
 
             stat.DebugStats();
@@ -96,9 +94,8 @@ public class JSONReader : MonoBehaviour
             }
             else
             {
-                playerStatsScriptable.currentHealth = (stat.ph);
+                playerStatsScriptable.currentHealth = (stat.ph - 1);
                 playerStatsScriptable.maxHealth = stat.mH;
-                playerStatsScriptable.score = stat.scr;
             }
 
             if (BulletScriptable == null)
@@ -107,7 +104,7 @@ public class JSONReader : MonoBehaviour
             }
             else
             {
-                
+
                 BulletScriptable.bulletDamage = stat.bD;
                 BulletScriptable.bulletSpeed = stat.bS;
                 BulletScriptable.DHH = stat.dhh;

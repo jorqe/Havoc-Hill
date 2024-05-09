@@ -48,17 +48,17 @@ public class SaveSelection : MonoBehaviour
         {
             press.transform.localPosition = new Vector3(0, 0.015f, 0);
 
-            if(buttonName == "Save1")
+            if (buttonName == "Save1")
             {
                 saveName = "JsonText1.txt";
                 File.WriteAllText(filePath, "JsonText1.txt");
             }
-            else if(buttonName == "Save2")
+            else if (buttonName == "Save2")
             {
                 saveName = "JsonText2.txt";
                 File.WriteAllText(filePath, "JsonText2.txt");
             }
-            else if(buttonName == "demo")
+            else if (buttonName == "demo")
             {
                 saveName = "DemoText.txt";
                 File.WriteAllText(filePath, "DemoText.txt");

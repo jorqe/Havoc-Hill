@@ -73,6 +73,8 @@ public class SetText : MonoBehaviour
                 saver.DemoSave();
             }
         }
+
+
     }
 
 
@@ -88,7 +90,7 @@ public class SetText : MonoBehaviour
     void Update()
     {
 
-        
+
         if (File.Exists(getPath()))
         {
             string selectedSaveFileName = File.ReadAllText(getPath());
@@ -103,7 +105,6 @@ public class SetText : MonoBehaviour
                     JSONReader.Stats firstStat = statsList.stats[0];
                     string displayText = $"Player Health: {firstStat.ph}\n" +
                                          $"Max Health: {firstStat.mH}\n" +
-                                         $"Score: {firstStat.scr}\n" +
                                          $"Bullet Damage: {firstStat.bD}\n" +
                                          $"Bullet Speed: {firstStat.bS}\n" +
                                          $"Fire Rate: {firstStat.fR}\n" +

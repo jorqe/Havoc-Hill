@@ -12,23 +12,22 @@ public class JSONWriter : MonoBehaviour
     public SaveSelection Select;
     public string savePath;
     public string filePath;
-    
 
 
 
-         void Start()
-         {
-            savePath = Path.Combine(Application.persistentDataPath, "SaveSelection.txt");
-            string textFromFile = File.ReadAllText(savePath);
-            filePath = Path.Combine(Application.persistentDataPath, textFromFile);
-         }
+
+    void Start()
+    {
+        savePath = Path.Combine(Application.persistentDataPath, "SaveSelection.txt");
+        string textFromFile = File.ReadAllText(savePath);
+        filePath = Path.Combine(Application.persistentDataPath, textFromFile);
+    }
 
     [System.Serializable]
     public class Stats
     {
         public string ph;
         public string mH;
-        public string scr;
         public string bD;
         public string bS;
         public string dhh;
@@ -87,7 +86,6 @@ public class JSONWriter : MonoBehaviour
         {
             ph = playerStatsScriptable.currentHealth.ToString(),
             mH = playerStatsScriptable.maxHealth.ToString(),
-            scr = playerStatsScriptable.score.ToString(),
             bD = BulletScriptable.bulletDamage.ToString(),
             bS = BulletScriptable.bulletSpeed.ToString(),
             dhh = BulletScriptable.DHH.ToString(),
@@ -107,7 +105,6 @@ public class JSONWriter : MonoBehaviour
         {
             ph = 120.ToString(),
             mH = 120.ToString(),
-            scr = 0.ToString(),
             bD = 10.ToString(),
             bS = 10.ToString(),
             dhh = 0.ToString(),
@@ -127,7 +124,6 @@ public class JSONWriter : MonoBehaviour
         {
             ph = 0.ToString(),
             mH = 200.ToString(),
-            scr = 0.ToString(),
             bD = 10.ToString(),
             bS = 10.ToString(),
             dhh = 0.ToString(),
@@ -147,7 +143,6 @@ public class JSONWriter : MonoBehaviour
         {
             ph = 1000.ToString(),
             mH = 1000.ToString(),
-            scr = 0.ToString(),
             bD = 50.ToString(),
             bS = 20.ToString(),
             dhh = 100.ToString(),
