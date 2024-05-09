@@ -19,6 +19,7 @@ public class SetText : MonoBehaviour
         string filePath1 = Path.Combine(Application.persistentDataPath, "JsonText1.txt");
         string filePath2 = Path.Combine(Application.persistentDataPath, "JsonText2.txt");
         string demoPath = Path.Combine(Application.persistentDataPath, "DemoText.txt");
+        
 
         savePath = Path.Combine(Application.persistentDataPath, "SaveSelection.txt");
 

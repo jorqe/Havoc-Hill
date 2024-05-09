@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.IO;
 
 public class WaveSpawner : MonoBehaviour {
 	public Transform enemyPrefab1;
@@ -30,10 +31,13 @@ public class WaveSpawner : MonoBehaviour {
 	public bool flag3 = true;
 	public string current_answer;
 	public JSONWriter saver;
+	private string ScoreFilePath;
+	public PlayerStatsScriptableObject playerStatsScriptable;
 
 
 	void Start() {
 		waveSpawnerScriptable.enemiesLeft = 0;
+		ScoreFilePath = Path.Combine(Application.persistentDataPath, "Score.txt");
 	}
 
 	void Update() {
@@ -55,7 +59,8 @@ public class WaveSpawner : MonoBehaviour {
 			//StartCoroutine(chooseUpg());
 			//StartCoroutine(trivia());
 			saver.Save();
-			if(flag){
+			//File.WriteAllText(ScoreFilePath, playerStatsScriptable.score.ToString());
+			if (flag){
 				StartCoroutine(endOfWave());
 			}
 			else{
@@ -130,7 +135,8 @@ public class WaveSpawner : MonoBehaviour {
 
 			questionInterface.SetActive(true);
 			saver.Save();
-            current_answer = textBoxUpdate.getAnswer();
+			//File.WriteAllText(ScoreFilePath, playerStatsScriptable.score.ToString());
+			current_answer = textBoxUpdate.getAnswer();
             Debug.Log("Current Answer = " + current_answer);
             flag2 = false;
 		}
