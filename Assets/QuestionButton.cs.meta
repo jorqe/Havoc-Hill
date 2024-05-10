@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 17bc8ab0244d47442a9761839eaaabe1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - press: {instanceID: 0}
+  - questionInterface: {instanceID: 0}
+  - textBoxUpdate: {instanceID: 0}
+  - triviaInputScriptable: {fileID: 11400000, guid: 3ec2c0bd91ac7b34ea478658b589b60d, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

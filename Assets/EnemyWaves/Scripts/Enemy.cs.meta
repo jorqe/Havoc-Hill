@@ -4,13 +4,16 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - waveSpawnerScriptable: {instanceID: 0}
-  - bullet: {instanceID: 0}
+  - waveSpawnerScriptable: {fileID: 11400000, guid: 810622195c34cfc4caa9d1eb8c06cca4, type: 2}
+  - bullet: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
   - playerStatsScriptable: {instanceID: 0}
-  - deathSmokePrefab: {fileID: 5597218544795505827, guid: 4aa4e682cc02e7c4b94403c600320723, type: 3}
-  - damageSmokePrefab: {fileID: 3283401868584669295, guid: 61be2c1793722434088d72c9e1514c70, type: 3}
+  - triviaInputScriptable: {fileID: 11400000, guid: 3ec2c0bd91ac7b34ea478658b589b60d, type: 2}
+  - deathSmokePrefab: {instanceID: 0}
+  - damageSmokePrefab: {instanceID: 0}
+  - idleSound: {instanceID: 0}
+  - flash_material: {instanceID: 0}
   executionOrder: 0
-  icon: {instanceID: 0}
+  icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

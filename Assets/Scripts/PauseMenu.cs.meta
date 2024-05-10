@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2de2958726f19b04c8df634d1cdcf905
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - wristUI: {instanceID: 0}
+  - rightRayInteractor: {instanceID: 0}
+  - playerStatsScriptable: {fileID: 11400000, guid: 21f263f98f36367428ee75e7287aa09a, type: 2}
+  - BulletScriptable: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -49,9 +49,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 514471462265150744, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 514471462265150744, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fd41f2c0021e45249805522d2856bcf9, type: 2}
+    - target: {fileID: 514471462265150744, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b5c0a0bb6ed8dc48bc306a6912f24c5, type: 2}
     - target: {fileID: 919132149155446097, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
       propertyPath: m_Name
       value: SlowGhost
@@ -68,7 +76,7 @@ PrefabInstance:
       addedObject: {fileID: 1806161677236714951}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4204911230267104691}
+      addedObject: {fileID: 8857968059631357010}
   m_SourcePrefab: {fileID: 100100000, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
 --- !u!1 &7092202126556470003 stripped
 GameObject:
@@ -93,9 +101,12 @@ MonoBehaviour:
   waveSpawnerScriptable: {fileID: 11400000, guid: 810622195c34cfc4caa9d1eb8c06cca4, type: 2}
   bullet: {fileID: 11400000, guid: dbe82a80cfb6fc148a6a1a57a2ee9610, type: 2}
   playerStatsScriptable: {fileID: 11400000, guid: 21f263f98f36367428ee75e7287aa09a, type: 2}
+  triviaInputScriptable: {fileID: 11400000, guid: 3ec2c0bd91ac7b34ea478658b589b60d, type: 2}
   volume: 0.5
-  deathSmokePrefab: {fileID: 5597218544795505827, guid: 4aa4e682cc02e7c4b94403c600320723, type: 3}
-  damageSmokePrefab: {fileID: 3283401868584669295, guid: 61be2c1793722434088d72c9e1514c70, type: 3}
+  deathSmokePrefab: {fileID: 3283401868584669295, guid: d26279faeedcfba4c88e9a354e28293f, type: 3}
+  damageSmokePrefab: {fileID: 3283401868584669295, guid: 5423072da79b1c14694026d3f1f06d7d, type: 3}
+  idleSound: {fileID: 0}
+  flash_material: {fileID: 2100000, guid: 8b5c0a0bb6ed8dc48bc306a6912f24c5, type: 2}
 --- !u!136 &1806161677236714951
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -119,7 +130,7 @@ CapsuleCollider:
   m_Height: 0.9289175
   m_Direction: 1
   m_Center: {x: 0, y: 0.5476915, z: -0.07868689}
---- !u!95 &4204911230267104691
+--- !u!95 &8857968059631357010
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0

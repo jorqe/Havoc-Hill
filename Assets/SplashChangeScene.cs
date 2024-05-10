@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class SplashChangeScene : MonoBehaviour
 {
-    int i;
+    int i = 7250;
     // Start is called before the first frame update
     void Start()
     {
-        i = 5;
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame

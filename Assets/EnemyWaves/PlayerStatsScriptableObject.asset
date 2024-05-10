@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc53acfda6aa8f4ca65eaa2b8f3a394, type: 3}
   m_Name: PlayerStatsScriptableObject
   m_EditorClassIdentifier: 
-  maxHealth: 220
-  currentHealth: 160
+  maxHealth: 200
+  currentHealth: 200
+  score: 28800

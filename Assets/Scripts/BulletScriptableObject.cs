@@ -8,6 +8,8 @@ public class BulletScriptableObject : ScriptableObject
     System.Random rnd = new System.Random();
     public float bulletSpeed = 10;
     public int bulletDamage = 1;
+    public int DHH = 0;
+    public int DLH = 0;
 
     public int critChance = 1;
     public int fireRate = 1;

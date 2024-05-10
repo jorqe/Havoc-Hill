@@ -60,10 +60,12 @@ public class Upgrades : MonoBehaviour
 
     public void DamageHighHealthUPG(){
         Debug.Log("in DamageHighHealthUPG");
+        bulletSO.DHH += 5;
     }
 
     public void DamageLowHealthUPG(){
         Debug.Log("in DamageLowHealthUPG");
+        bulletSO.DLH += 5;
     }
 
     public void DamageQuestionComboUPG(){

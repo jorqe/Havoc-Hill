@@ -12,6 +12,7 @@ public class Shoot : MonoBehaviour
     public BulletScriptableObject bulletSO;
     //public AudioClip fireSound;
     //public AudioSource audioSource;
+    private AudioSource audioSource;
     public InputActionProperty triggerButton;
     public float fireSpeed;
     //public float volume = 0.5f;
@@ -20,6 +21,7 @@ public class Shoot : MonoBehaviour
     void Start()
     {
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
+        audioSource = GetComponent<AudioSource>();
         //grabbable.activated.AddListener(shootBullet);
     }
 
@@ -31,10 +33,12 @@ public class Shoot : MonoBehaviour
 
     public void BeginFire() {
         if (_current == null)
+        {
             _current = StartCoroutine(shootBullet());
+        }
     }
 
-    public void StopFire() {
+        public void StopFire() {
         if(_current != null) StopCoroutine(_current);
     }
 
